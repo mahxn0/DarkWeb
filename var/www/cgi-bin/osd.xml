@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osd_block>
+  <osd>
+    <str>adc</str>
+    <size>12</size>
+    <color>4</color>
+    <x>13</x>
+    <y>14</y>
+    <device_addr>15</device_addr>
+    <time>0</time>
+  </osd>
+</osd_block>

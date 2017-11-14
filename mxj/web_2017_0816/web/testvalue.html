@@ -1,0 +1,31 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script type="text/javascript">
+function valueUpdate(obj)
+{
+    document.getElementById('text').value=obj.value;
+}
+function setCMD(obj){
+    document.getElementById('remoteCMD').value = obj.value;
+}
+</script>
+
+</head>
+
+<body>
+<input type="text" id="text" value="123" />
+<input type="button" value="HelloWorld" name="btn" id="btn" onclick="valueUpdate(this)"/>
+
+<table>
+    <tr>
+    <td>&nbsp; <input type="text" value="ipconfig" id="remoteCMD"> <br>
+    &nbsp; <input type="radio" value="ipconfig" name="CMD" onclick="setCMD(this)" id="cmd">查看网络状态 <br>
+    &nbsp; <input type="radio" value="dir" name="CMD" id="cmd" onclick="setCMD(this)">查看目录 <br>
+    &nbsp; <input type="radio" value="netuser" name="CMD" id="cmd" onclick="setCMD(this)">查看用户 <br>
+    &nbsp; <input type="radio" value="adduser" name="CMD" id="cmd" onclick="setCMD(this)">添加用户 <br>
+    </td> 
+        </tr>
+    </table>
+</body>
+</html>

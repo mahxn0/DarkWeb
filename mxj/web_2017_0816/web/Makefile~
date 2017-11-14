@@ -1,0 +1,127 @@
+#for makefile web module by pkf
+.SUFFIXES:
+.SUFFIXES: .o .c
+.PHONY: clean mrclean distclean depend all dist
+
+INSTALLDIR = $(EXEC_DIR)
+
+GCC_FLAGS = -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual\
+  -Wtraditional\
+  -Wshadow\
+  -Wconversion\
+  -Waggregate-return\
+  -Wmissing-prototypes\
+  -Wnested-externs\
+  -Wall \
+  -Wundef -Wwrite-strings -Wredundant-decls -Winline \
+  -mshort-calls 
+
+BASE_INSTALL_DIR    := /opt/arm-2009q1
+BUILD_TOOL_DIR      := $(BASE_INSTALL_DIR)
+BUILD_TOOL_PREFIX   := $(BUILD_TOOL_DIR)/bin/arm-none-linux-gnueabi-
+
+
+
+
+srcdir = .
+
+
+
+LDFLAGS = -g -lpthread   
+LIBS = 
+
+
+
+CFLAGS = -O3 -pipe -Wall   
+
+LDFLAGS += -g -L/opt/dvsdk/DVRRDK_02.80.00.10/ti_tools/linux_devkit/arm-none-linux-gnueabi/usr/lib  -lxml2 -lz
+CFLAGS += -I /opt/dvsdk/DVRRDK_02.80.00.10/ti_tools/linux_devkit/arm-none-linux-gnueabi/usr/include/libxml2/ 
+
+
+CFLAGS += -I./cgi.h
+
+
+
+LEX = flex 
+CC = $(BUILD_TOOL_PREFIX)gcc 
+CPP = $(BUILD_TOOL_PREFIX)gcc -E
+
+
+SOURCES = data_process.c data_update.c server_api.c net_config.c charset.c webparam/xml_op.c
+USOURCES = upload.c cgic.c
+TSOURCES = test.c
+
+
+OBJS =$(SOURCES:.c=.o)
+UOBJS =$(USOURCES:.c=.o)
+
+all:	data_update.cgi  upload.cgi test.cgi fsupdate
+
+install: data_update.cgi
+	install data_update.cgi $(INSTALLDIR)
+#	make fsupdate
+
+data_update.cgi:	$(OBJS) $(LIBS)
+	$(CC)  -o $@ $^ $(LDFLAGS) $(CFLAGS)
+	
+upload.cgi:	$(UOBJS) $(LIBS)
+	$(CC) -o $@ $^ $(LDFLAGS) $(CFLAGS)
+
+test.cgi: $(TESTOBJS) $(LIBS)
+	$(CC) -o $@ $^ $(LDFLAGS) $(CFLAGS)
+
+clean:
+	rm -f $(OBJS) $(UOBJS) data_update.cgi upload.cgi
+
+fsupdate:
+	@echo "--------------------------------------------------------------"
+	@echo "|           !!!!!!!!!!!!!!<file update sucess>!!!!!!!!!!!!!  |"
+	@echo "--------------------------------------------------------------"
+	
+#	cp *.html   /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/
+#	cp *.txt   /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/
+#	cp ./*.js   /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/
+#	cp ./*.cgi   /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/cgi-bin/
+
+#	chmod 777 /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/*.html
+#	chmod 777 /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/cgi-bin/*.cgi
+#	chmod 777 /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/*.js
+
+	cp *.html   /home/ubuntu/var/www/
+	cp *.txt   /home/ubuntu/var/www/
+	cp ./*.js   /home/ubuntu/var/www/
+	cp ./*.cgi   /home/ubuntu/var/www/cgi-bin/
+
+	chmod 777 /home/ubuntu/var/www/*.html
+	chmod 777 /home/ubuntu/var/www/cgi-bin/*.cgi
+	chmod 777 /home/ubuntu/var/www/*.js
+
+	
+distclean:	mrclean
+
+mrclean:	clean
+	rm -f config.status  Makefile config.log
+
+
+.depend:
+	$(CPP) -MM $(SOURCES) > .depend
+        
+depend:
+	-rm -f .depend
+	$(MAKE) .depend
+        
+include .depend
+
+# tags
+tags:	$(SOURCES)
+	ctags -o tags $^ *.h
+
+# dist
+dist:
+	$(MAKE) clean
+	./makedist.sh
+        
+# object dump
+boa.objdump:    data_update.cgi
+	objdump --disassemble-all --source data_update.cgi > $@
+

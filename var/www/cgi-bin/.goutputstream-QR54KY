@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+	<ip>192.168.0.133</ip>
+	<netmask>255.255.255.0</netmask>
+	<gateway>192.168.0.254</gateway>
+	<nameserver>192.168.0.1</nameserver>
+</network>
+<enc>
+	<bitrate>2000000</bitrate>
+	<resolution>0</resolution>
+	<fps>0</fps>
+	<bitctrl>1</bitctrl>
+</enc>
+<client>
+	<talk_back_type>0</talk_back_type>
+</client>
+<audio>
+	<pb_volume>95</pb_volume>
+	<r_volume>50</r_volume>
+</aduio>
+<user>
+	<name>admin</name>
+	<pwd>admin</pwd>
+</user>
+<osd>
+	<osd_num>1</osd_num>
+	<osd_str>"

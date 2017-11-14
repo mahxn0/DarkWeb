@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>编码系统</title>
+<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="JavaScript" src="xhreqproc.js"></script>
+ <style type="text/css">
+#topDiv
+{
+   width: 100%;
+   height: 100px;
+   background: #b6b6b6;
+   border-top: 0px;
+}
+#topNav
+{
+  width: 100%;
+  border: 0px;
+  margin-top: 45px;
+}
+#middleDiv
+ {
+	width: 100%;
+	height: 360px;
+   border-top: 10px solid #fff;
+}
+ 
+#leftNav
+{
+   float: left;
+   width: 10%;
+	height: 360px;
+   background: #b6b6b6;
+	 border: 0px;
+ }
+ 
+ #mainContent
+ {
+	 float: right;
+	 height: 360px;
+	 width: 89%;
+	 border: 0px;
+	 margin-left: 10px;
+ }
+	
+#bottomDiv
+{
+	   width: 100%;
+	   float: left;
+ }
+#list_left
+{
+ width:20%;
+ float:left;
+ height:900px;
+ border:0px;
+ background-color:#666666;
+}
+.a
+{
+ font-size:18px;
+ color:#FFFFFF;
+}
+#main_page
+{
+	width:80%;
+	height:80%;
+	float:right;
+	margin:0px;
+	margin-left:0px;
+	
+}
+ #bottomNav
+ {
+	clear: both;
+	margin: 0;
+   padding: 0;
+	width: 100%;
+   height: 46px;
+	background: #b6b6b6;
+ border: 0px;
+	 border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+ }
+ .td
+ {
+ 	width:100%px;
+   line-height:50px;
+ }
+ </style>
+
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onLoad="version_init()"><!--bgcolor=#123755style="color:#FFFFFF;" style="height:60px" -->
+<div align="center">
+<div  id="list_left">
+<br>
+<br>
+<br>
+<tr></tr>
+<tr>
+	               <ul >
+	             
+               <li ><a class="a"  href="./display.html" ><strong>  视频播放  </strong></a></li><br><br><br>
+			  <li ><a  class="a" href="./date.html"   target="_self"  ><strong>日期时间</strong></a></li><br><br><br>
+			   <li ><a class="a" href="./ipaddr.html"   target="_self"  ><strong>网络设置</strong></a></li><br><br><br>			
+			<li ><a  class="a" href="./change_pwd.html"   target="_self"  ><strong>用户管理</strong></a></li><br><br><br>			
+			<li ><a  class="a" href="./arithmetic.html"   target="_self"  ><strong>算法参数</strong></a></li><br><br><br>
+			<li ><a  class="a" href="./version.html"   target="_self"  ><strong>版本信息</strong></a></li><br><br><br>
+           <!-- <li ><a  class="a" href="#"   target="_self" onclick = "openwin()" ><strong>版本信息</strong></a></li><br><br><br>-->
+    		 </ul></tr>
+</div>
+<div id="main_page">
+<tr></tr>
+<tr> <h1> 编码系统-网络编码</h1></tr>
+<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST"> 
+<hr>
+ <table border="0" width="100%" align="center">
+    <tr  class="td">
+          <td width="30%px">
+            <p align="center"></td>
+            <td width="30%px">
+              <p align="center"></td>
+			  <td width="40%px"></td>
+      </tr>
+		
+		<br>
+	    <tr height="30%px", class="td">
+           <font size = "5">
+              <td width="30%px">内核
+              <td width="30%px" id = "kernel_v_id">kernel 3.2</td>
+		  </font>
+       </tr>
+       <tr class="td">
+		   <font size = "5">
+             <td>文件系统</td>
+		     <td id = "fs_v_id">file system 2.56.6</td>
+	     	</font>
+        </tr>
+		<tr class="td">
+			<font size="5">
+		       <td > 硬件版本</td>
+		        <td id = "hw_v_id">hardware version 1.1</td>
+			</font>
+		</tr>
+		<tr class="td">
+            <font size="5">
+               <td >MAC地址</td>
+                <td id = "mac_v_id"></td>
+            </font>
+        </tr>
+		<tr class="td">
+            <font size="5">
+               <td >设备编号</td>
+                <td id = "dev_v_id"></td>
+            </font>
+        </tr>
+
+
+
+
+
+
+  </table>
+</form>
+	 </div>
+	 </div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>编码系统</title>
+<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="JavaScript" src="xhreqproc.js"></script>
+ <style type="text/css">
+#topDiv
+{
+   width: 100%;
+   height: 100px;
+   background: #b6b6b6;
+   border-top: 0px;
+}
+#topNav
+{
+  width: 100%;
+  border: 0px;
+  margin-top: 45px;
+}
+#middleDiv
+ {
+	width: 100%;
+	height: 360px;
+   border-top: 10px solid #fff;
+}
+ 
+#leftNav
+{
+   float: left;
+   width: 10%;
+	height: 360px;
+   background: #b6b6b6;
+	 border: 0px;
+ }
+ 
+ #mainContent
+ {
+	 float: right;
+	 height: 360px;
+	 width: 89%;
+	 border: 0px;
+	 margin-left: 10px;
+ }
+	
+#bottomDiv
+{
+	   width: 100%;
+	   float: left;
+ }
+#list_left
+{
+ width:20%;
+ float:left;
+ height:900px;
+ border:0px;
+ background-color:#666666;
+}
+.a
+{
+ font-size:18px;
+ color:#FFFFFF;
+}
+#main_page
+{
+	width:80%;
+	height:80%;
+	float:right;
+	margin:0px;
+	margin-left:0px;
+	
+}
+ #bottomNav
+ {
+	clear: both;
+	margin: 0;
+   padding: 0;
+	width: 100%;
+   height: 46px;
+	background: #b6b6b6;
+ border: 0px;
+	 border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+ }
+ .td
+ {
+ 	width:100%px;
+
+ }
+ </style>
+ 
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onLoad="time_loop_refresh()"><!--onload="initPage()"bgcolor=#123755style="color:#FFFFFF;" style="height:60px" -->
+<div align="center">
+<div  id="list_left">
+<br>
+<br>	
+<br>
+<tr></tr>
+<tr>
+	               <ul >
+	             
+          <li ><a class="a"  href="./video.html" ><strong>  视频码流  </strong></a></li><br><br><br>
+				 <li ><a class="a"  href="./display.html" ><strong>  视频播放  </strong></a></li><br><br><br>
+			  <li ><a  class="a" href="./date.html"   target="_self"  ><strong>日期时间</strong></a></li><br><br><br>
+			   <li ><a class="a" href="./ipaddr.html"   target="_self"  ><strong>网络设置</strong></a></li><br><br><br>
+			 <li ><a  class="a" href="./client.html"   target="_self"  ><strong>系统设置</strong></a></li><br><br><br>
+				 <li ><a  class="a" href="./firmware.html"   target="_self"  ><strong>升级更新</strong></a></li><br><br><br>
+		<li ><a  class="a" href="./audio.html"   target="_self"  ><strong>音频设置</strong></a></li><br><br><br>	 
+			<li ><a  class="a" href="./change_pwd.html"   target="_self"  ><strong>用户管理</strong></a></li><br><br><br>
+			<li ><a  class="a" href="./osdsetting.html"   target="_self"  ><strong>字符叠加</strong></a></li><br><br><br>
+			<li ><a  class="a" href="./arithmetic.html"   target="_self"  ><strong>算法参数</strong></a></li><br><br><br>
+		<li ><a  class="a" href="./version.html"   target="_self"  ><strong>版本信息</strong></a></li><br><br><br>
+			<!--<li ><a  class="a" href="#"   target="_self" onclick = "openwin()" ><strong>版本信息</strong></a></li><br><br><br>-->
+		</ul></tr>
+</div>
+<div id="main_page">
+<tr></tr>
+<tr> <h1>编码系统-日期时间设置</h1></tr>
+<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST"> 
+<hr>
+ <table border="0" width="100%" align="center">
+     <tr  class="td">
+          <td width="30%px">
+            <p align="center"></td>
+            <td width="30%px">
+              <p align="center"></td>
+			  <td width="40%px"></td>
+      </tr>
+	   <tr>
+	   <td id ="current_time"></td>
+          <td width="30%px" ><p align="left">日期:
+			<input type="text" value="03-01-2014" name="date_h"></p></td>
+			 <td width="30%px"><p align="left">时间:
+			 &nbsp;
+			 <select name="hour_h" style="width:40px" >
+	   <option value="0">00</option>
+	   <option value="1">01</option>
+	   <option value="2">02</option>
+	   <option value="3">03</option>
+	   <option value="4">04</option>
+	   <option value="5">05</option>
+	   <option value="6">06</option>
+	   <option value="7">07</option>
+	   <option value="8">08</option>
+	   <option value="9">09</option>
+	   <option value="10">10</option>
+	   <option value="11">11</option>
+	   <option value="12">12</option>
+	   <option value="13">13</option>
+	   <option value="14">14</option>
+	   <option value="15">15</option>
+	   <option value="16">16</option>
+	   <option value="17">17</option>
+	   <option value="18">18</option>
+	   <option value="19">19</option>
+	   <option value="20">20</option>
+	   <option value="21">21</option>
+	   <option value="22">22</option>
+	   <option value="23">23</option>
+	   </select>-时
+	   &nbsp;
+	    <select name="min_h" style="width:50px" >
+	   <option value="0">00</option>
+	   <option value="1">01</option>
+	   <option value="2">02</option>
+	   <option value="3">03</option>
+	   <option value="4">04</option>
+	   <option value="5">05</option>
+	   <option value="6">06</option>
+	   <option value="7">07</option>
+	   <option value="8">08</option>
+	   <option value="9">09</option>
+	   <option value="10">10</option>
+	   <option value="11">11</option>
+	   <option value="12">12</option>
+	   <option value="13">13</option>
+	   <option value="14">14</option>
+	   <option value="15">15</option>
+	   <option value="16">16</option>
+	   <option value="17">17</option>
+	   <option value="18">18</option>
+	   <option value="19">19</option>
+	   <option value="20">20</option>
+	   <option value="21">21</option>
+	   <option value="22">22</option>
+	   <option value="23">23</option>
+	   <option value="24">24</option>
+	   <option value="25">25</option>
+	   <option value="26">26</option>
+	   <option value="27">27</option>
+	   <option value="28">28</option>
+	   <option value="29">29</option>
+	   <option value="30">30</option>
+	   <option value="31">31</option>
+	   <option value="32">32</option>
+	   <option value="33">33</option>
+	   <option value="34">34</option>
+	   <option value="35">35</option>
+	   <option value="36">36</option>
+	   <option value="37">37</option>
+	   <option value="38">38</option>
+	   <option value="39">39</option>
+	   <option value="40">40</option>
+	   <option value="41">41</option>
+	   <option value="42">42</option>
+	   <option value="43">43</option>
+	   <option value="44">44</option>
+	   <option value="45">45</option>
+	   <option value="46">46</option>
+	   <option value="47">47</option>
+	   <option value="48">48</option>
+	   <option value="49">49</option>
+	   <option value="50">50</option>
+	   <option value="51">51</option>
+	   <option value="52">52</option>
+	   <option value="53">53</option>
+	   <option value="54">54</option>
+	   <option value="55">55</option>
+	   <option value="56">56</option>
+	   <option value="57">57</option>
+	   <option value="58">58</option>
+	   <option value="59">59</option>
+	   </select>-分
+			  &nbsp;
+		<select name="sec_h" style="width:50px" >
+	   <option value="0">00</option>
+	   <option value="1">01</option>
+	   <option value="2">02</option>
+	   <option value="3">03</option>
+	   <option value="4">04</option>
+	   <option value="5">05</option>
+	   <option value="6">06</option>
+	   <option value="7">07</option>
+	   <option value="8">08</option>
+	   <option value="9">09</option>
+	   <option value="10">10</option>
+	   <option value="11">11</option>
+	   <option value="12">12</option>
+	   <option value="13">13</option>
+	   <option value="14">14</option>
+	   <option value="15">15</option>
+	   <option value="16">16</option>
+	   <option value="17">17</option>
+	   <option value="18">18</option>
+	   <option value="19">19</option>
+	   <option value="20">20</option>
+	   <option value="21">21</option>
+	   <option value="22">22</option>
+	   <option value="23">23</option>
+	   <option value="24">24</option>
+	   <option value="25">25</option>
+	   <option value="26">26</option>
+	   <option value="27">27</option>
+	   <option value="28">28</option>
+	   <option value="29">29</option>
+	   <option value="30">30</option>
+	   <option value="31">31</option>
+	   <option value="32">32</option>
+	   <option value="33">33</option>
+	   <option value="34">34</option>
+	   <option value="35">35</option>
+	   <option value="36">36</option>
+	   <option value="37">37</option>
+	   <option value="38">38</option>
+	   <option value="39">39</option>
+	   <option value="40">40</option>
+	   <option value="41">41</option>
+	   <option value="42">42</option>
+	   <option value="43">43</option>
+	   <option value="44">44</option>
+	   <option value="45">45</option>
+	   <option value="46">46</option>
+	   <option value="47">47</option>
+	   <option value="48">48</option>
+	   <option value="49">49</option>
+	   <option value="50">50</option>
+	   <option value="51">51</option>
+	   <option value="52">52</option>
+	   <option value="53">53</option>
+	   <option value="54">54</option>
+	   <option value="55">55</option>
+	   <option value="56">56</option>
+	   <option value="57">57</option>
+	   <option value="58">58</option>
+	   <option value="59">59</option>
+	   </select>-秒</p></td>
+       </tr>
+	   <tr>
+	   <td></td>
+	   <td width="30%px"><p align="left">日期格式:<select name="date_format_h" style="width:30%">
+	   <!--<option value="0">年/月/日</option>-->
+	   <option value="1">日/月/年</option></select></p></td>
+	   <td width="30%px"><p align="left">时间格式:<select name="time_format_h" style="width:30%">
+	   <option value="0">24hrs</option></select></p></td></tr>
+
+	   <tr>
+	  <td></td>
+          <td colspan="1" width="20%">
+            <p align="center"><input type="submit" value="确定(OK)" name="submit"></td>
+        </tr>
+  </table>
+</form>
+	 </div>
+	 </div>
+</body>
+</html>
+
+

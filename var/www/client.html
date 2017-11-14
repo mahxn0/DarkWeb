@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>人形检测</title>
+<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="JavaScript" src="xhreqproc.js"></script>
+ <style type="text/css">
+#topDiv
+{
+   width: 100%;
+   height: 100px;
+   background: #b6b6b6;
+   border-top: 0px;
+}
+#topNav
+{
+  width: 100%;
+  border: 0px;
+  margin-top: 45px;
+}
+#middleDiv
+ {
+	width: 100%;
+	height: 360px;
+   border-top: 10px solid #fff;
+}
+ 
+#leftNav
+{
+   float: left;
+   width: 10%;
+	height: 360px;
+   background: #b6b6b6;
+	 border: 0px;
+ }
+ 
+ #mainContent
+ {
+	 float: right;
+	 height: 360px;
+	 width: 89%;
+	 border: 0px;
+	 margin-left: 10px;
+ }
+	
+#bottomDiv
+{
+	   width: 100%;
+	   float: left;
+ }
+#list_left
+{
+ width:20%;
+ float:left;
+ height:900px;
+ border:0px;
+ background-color:#666666;
+}
+.a
+{
+ font-size:18px;
+ color:#FFFFFF;
+}
+#main_page
+{
+	width:80%;
+	height:80%;
+	float:right;
+	margin:0px;
+	margin-left:0px;
+	
+}
+ #bottomNav
+ {
+	clear: both;
+	margin: 0;
+   padding: 0;
+	width: 100%;
+   height: 46px;
+	background: #b6b6b6;
+ border: 0px;
+	 border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+ }
+ .td
+ {
+ 	width:100%px;
+
+ }
+ </style>
+
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onLoad="client_init()"><!--bgcolor=#123755style="color:#FFFFFF;" style="height:60px" -->
+<div align="center">
+<div  id="list_left">
+<br>
+<br>
+<br>
+<tr></tr>
+<tr>
+	               <ul >
+	             
+               <li ><a class="a"  href="./display.html" ><strong>  视频播放  </strong></a></li><br><br><br>
+			   <li ><a class="a" href="./ipaddr.html"   target="_self"  ><strong>网络设置</strong></a></li><br><br><br>			
+			<li ><a  class="a" href="./change_pwd.html"   target="_self"  ><strong>用户管理</strong></a></li><br><br><br>	
+      		<li ><a  class="a" href="./date.html"   target="_self"  ><strong>日期时间</strong></a></li><br><br><br>
+			<li ><a  class="a" href="./version.html"   target="_self"  ><strong>版本信息</strong></a></li><br><br><br>
+			 <!--<li ><a  class="a" href="#"   target="_self" onclick = "openwin()" ><strong>版本信息</strong></a></li><br><br><br>-->
+    		 </ul></tr>
+</div>
+<div id="main_page">
+<tr></tr>
+<tr> <h1>人形检测-网络编码</h1></tr>
+<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST"> 
+<hr>
+ <table border="0" width="100%" align="center">
+    <tr  class="td">
+          <td width="30%px">
+            <p align="center"></td>
+            <td width="30%px">
+              <p align="center"></td>
+			  <td width="40%px"></td>
+      </tr>
+<!--
+	    <tr>
+          <td width="30%px">
+        <p align="center">&nbsp;&nbsp;&nbsp;编码通道ch0码率（单位：bit）</p></td>
+            <td width="30%px">
+              <p align="left" ><input type="text" style="height:18px;width:400px"  name="bit_rate0" id="bir_rate_id0" value="2000000" ></p></td>
+			  <td><p align="left" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如(4M):  4000000</td>
+       </tr>
+	  
+       <tr>
+        <td>
+        <p align="center">编码分辨率
+        </td>
+       <td>
+		 <p align="left">
+        <select name="select_resolution" style="width:30%" id = "select_resolution_id">
+        <option  selected="selected" value="one" >1080p</option>
+           <option value="two" >720p</option>
+        </td>
+        </tr>
+-->
+	 <tr>
+        <td>
+        <p align="center">对讲类型 (重启生效)
+        </td>
+       <td>
+		 <p align="center">
+        <select name="select_client_type" style="width:30%" id = "client_type_id">
+          <option  selected="selected" value="one" >PC端</option>
+          <option value="two" >解码板</option>
+		  <option value="three" >Android端</option>
+        </td>
+        </tr>
+
+
+       <tr>
+		  <td>
+		 <p align="center">重启设备
+		</td>
+	  	
+        <td >
+		<p align="center">
+		<input id="shi" name="video_reboot" value="1"         onclick="return systemReboot();"  type="radio">是&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;  <input id="fou" name="video_reboot" checked="checked" value="0"                                             type="radio">否&nbsp;</p></td>
+			  </tr>
+	<tr>
+	  <td></td>
+          <td colspan="1" width="30%">
+            <p align="center"><input  type="submit" value="确定(OK)" name="submit" onclick="return systemParam();"></td>
+			
+        </tr>
+  </table>
+</form>
+	 </div>
+	 </div>
+</body>
+</html>

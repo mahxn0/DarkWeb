@@ -1,0 +1,6 @@
+data_process.o: data_process.c data_define.h data_update.h server_api.h \
+  net_config.h
+data_update.o: data_update.c data_update.h data_define.h
+server_api.o: server_api.c data_define.h data_update.h server_api.h \
+  net_config.h
+net_config.o: net_config.c net_config.h

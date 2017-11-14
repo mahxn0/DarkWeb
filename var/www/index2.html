@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>decoder video</title>
+<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+ <style type="text/css">
+#topDiv
+{
+   width: 100%;
+   height: 100px;
+   background: #b6b6b6;
+   border-top: 0px;
+}
+#topNav
+{
+  width: 100%;
+  border: 0px;
+  margin-top: 45px;
+}
+#middleDiv
+ {
+	width: 100%;
+	height: 360px;
+   border-top: 10px solid #fff;
+}
+ 
+#leftNav
+{
+   float: left;
+   width: 10%;
+	height: 360px;
+   background: #b6b6b6;
+	 border: 0px;
+ }
+ 
+ #mainContent
+ {
+	 float: right;
+	 height: 360px;
+	 width: 89%;
+	 border: 0px;
+	 margin-left: 10px;
+ }
+	
+#bottomDiv
+{
+	   width: 100%;
+	   float: left;
+ }
+#list_left
+{
+ width:20%;
+ float:left;
+ height:720px;
+ border:0px;
+ background-color:#666666;
+}
+.a
+{
+ font-size:18px;
+ color:#FFFFFF;
+}
+#main_page
+{
+	width:80%;
+	height:80%;
+	float:right;
+	margin:0px;
+	margin-left:0px;
+	
+}
+ #bottomNav
+ {
+	clear: both;
+	margin: 0;
+   padding: 0;
+	width: 100%;
+   height: 46px;
+	background: #b6b6b6;
+ border: 0px;
+	 border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+ }
+ .td
+ {
+ 	width:100%px;
+
+ }
+ </style>
+ 
+<script language="javascript">
+	function systemReboot()
+		{
+			//if (confirm("确定要重启系统吗？") == 1)
+			//{
+				//alert("与设备的连接将断开，请稍后重新登录");
+				//document.getElementById("player").SystemReboot();
+			//}
+			//else 
+			//{
+			//}
+			if(confirm("你确定要重启系统?")==1)
+			{
+				return true;
+			}
+			else
+			{
+				
+				var m_check1=document.getElementById("shi");
+				var m_check2=document.getElementById("fou");
+				if(m_check1. heck1. 			if(m_check2. check2. 		//return false;
+			}
+		}
+ </script>
+  <script language="javascript">
+	function openwin()
+	{
+		window.open("./version.txt","关于","width=200,heigth=200");
+	}
+</script> 
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 ><!--onload="initPage()"bgcolor=#123755style="color:#FFFFFF;" style="height:60px" -->
+<div align="center">
+<div  id="list_left">
+<br>
+<br>
+<br>
+<tr></tr>
+<tr>
+	               <ul >
+	             
+              <li ><a class="a"  href="./index.html" ><strong>  视频码流  </strong></a></li><br><br><br>
+			
+			  <li ><a  class="a" href="./date.html"   target="_self"  ><strong>日期时间</strong></a></li><br><br><br>
+			   <li ><a class="a" href="./ipaddr.html"   target="_self"  ><strong>网络设置</strong></a></li><br><br><br>
+				 <li ><a  class="a" href="./firmware.html"   target="_self"  ><strong>升级更新</strong></a></li><br><br><br>
+         <li ><a  class="a" href="#"   target="_self" onclick = "openwin()" ><strong>版本信息</strong></a></li><br><br><br>
+    		 </ul></tr>
+</div>
+<div id="main_page">
+<tr></tr>
+<tr> <h1>Tirvideo 解码系统v0.1-网络解码</h1></tr>
+<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST"> 
+<hr>
+ <table border="0" width="100%" align="center">
+    <tr  class="td">
+          <td width="30%px">
+            <p align="center"></td>
+            <td width="30%px">
+              <p align="center"></td>
+			  <td width="40%px"></td>
+      </tr>
+	  
+	   <tr>
+	   <td width="30%px"><p align="center">切换批号</p></td>
+	   <td><p><select name="Batch_level" style="width:30%">
+	   <option  selected="selected" value="one">Batch0</option>
+
+	   <option value="two">Batch1</option>
+	   <option value="thid">Batch2</option>
+	   <option value="four">Batch3</option>
+	    <option value="five">Batch4</option>
+		 <option value="six">Batch5</option>
+		  <option value="seven">Batch6</option>
+		   <option value="eight">Batch7</option>
+</select></p></td>
+
+		<td>
+        <p align="left">切换时间<input type="text"  name="changetime_h"  value="10" >单位:秒(s),默认0 为不切换</p></td>
+		</tr>
+		
+	   <tr>
+	   <td width="30%px"><p align="center">解码通道号</p></td>
+	   <td><p><select name="Channel_level" style="width:30%">
+	   <option  selected="selected" value="one">Channel0</option>
+
+	   <option value="two">Channel1</option>
+	   <option value="thid">Channel2</option>
+	   <option value="four">Channel3</option>
+</select></p></td>
+	
+	   <td><p align="left">多路解码 <select name="Channel_sum" style="width:30%">
+	   <option  selected="selected" value="mult_ch1">1-video</option>
+
+	   <option value="mult_ch2">2-video</option>
+	   <option value="mult_ch3">3-video</option>
+	   <option value="mult_ch4">4-video</option>
+</select></p>
+	<!--<p align="left"><input id="duo" name="mult_ch" value="1"    type="radio">单路&nbsp;
+          <input id="dan" name="mult_ch" checked="checked" value="0"          type="radio">多路&nbsp;</p>--></td>
+</tr>
+	
+	  
+	   <tr>
+          <td width="30%px">
+        <p align="center">解码通道码流rtsp地址</p></td>
+            <td width="30%px">
+              <p><input type="text" style="height:30px;width:400px"  name="rtspaddr_h"  value="rtsp://192.168.0.102/1.264" ></p></td>
+			  <td>exmple:rtsp://192.168.0.102/1.264</td>
+       </tr>
+	  
+	 
+       <tr>
+		  <td></td>
+	  	
+        <td >
+		 <p align="left">是否重启相机<input id="shi" name="video_reboot" value="1"         onclick="return systemReboot();"  type="radio">是&nbsp;
+          <input id="fou" name="video_reboot" checked="checked" value="0"                                             type="radio">否&nbsp;</p></td>
+			  </tr>
+	<tr>
+	  <td></td>
+          <td colspan="1" width="30%">
+            <p ><input type="submit" value="确定(OK)" name="submit"></td>
+			
+        </tr>
+  </table>
+</form>
+	 </div>
+	 </div>
+</body>
+</html>

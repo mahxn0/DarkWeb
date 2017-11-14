@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<client>
+	<contact_type>0</contact_type>
+	<call_type>0</call_type>
+	<call_ip>192.168.0.134</call_ip>
+	<sip_server_ip>192.168.0.158</sip_server_ip>
+	<sip_server_port>5029</sip_server_port>i
+	<echo_volume>0</echo_volume>
+	<enc>
+		<bitrate>2000000</bitrate>
+		<resolution>0</resolution>
+		<fps>1</fps>
+		<bitctrl>1</bitctrl>
+		<disresolution>0</disresolution>
+	</enc>
+
+</client>

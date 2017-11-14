@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>人形检测</title>
+<meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+ <style type="text/css">
+#topDiv
+{
+   width: 100%;
+   height: 100px;
+   background: #b6b6b6;
+   border-top: 0px;
+}
+#topNav
+{
+  width: 100%;
+  border: 0px;
+  margin-top: 45px;
+}
+#middleDiv
+ {
+	width: 100%;
+	height: 360px;
+   border-top: 10px solid #fff;
+}
+ 
+#leftNav
+{
+   float: left;
+   width: 10%;
+	height: 360px;
+   background: #b6b6b6;
+	 border: 0px;
+ }
+ 
+ #mainContent
+ {
+	 float: right;
+	 height: 360px;
+	 width: 89%;
+	 border: 0px;
+	 margin-left: 10px;
+ }
+	
+#bottomDiv
+{
+	   width: 100%;
+	   float: left;
+ }
+#list_left
+{
+ width:20%;
+ float:left;
+ height:850px;
+ border:0px;
+ background-color:#666666;
+}
+.a
+{
+ font-size:18px;
+ color:#FFFFFF;
+ font:xx-large;
+ font:larger;
+ font:bolder;
+}
+#main_page
+{
+	width:80%;
+	height:80%;
+	float:right;
+	margin:0px;
+	margin-left:0px;
+	
+}
+ #bottomNav
+ {
+	clear: both;
+	margin: 0;
+   padding: 0;
+	width: 100%;
+   height: 46px;
+	background: #b6b6b6;
+ border: 0px;
+	 border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+ }
+ .td
+ {
+ 	width:100%px;
+	
+ }
+ </style>
+ <script language="javascript">
+	function systemReboot()
+		{
+			//if (confirm("确定要重启系统吗？") == 1)
+			//{
+				//alert("与设备的连接将断开，请稍后重新登录");
+				//document.getElementById("player").SystemReboot();
+			//}
+			//else 
+			//{
+			//}
+			if(confirm("你确定要重启相机?")==1)
+			{
+				return true;
+			}
+			else
+			{
+				
+				var m_check1=document.getElementById("shi");
+				var m_check2=document.getElementById("fou");
+				if(m_check1. heck1. 			if(m_check2. check2. 		//return false;
+			}
+		}
+ </script>
+</head>
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 ><!--onload="initPage()"bgcolor=#123755style="color:#FFFFFF;" style="height:60px" -->
+<div align="center">
+<div  id="list_left">
+<br>
+<br>
+<br>
+<tr></tr>
+<tr>
+	           <ul >
+	             
+              <li ><a class="a"  href="./index.htm" ><strong>  视频码流  </strong></a></li><br><br><br>
+             <li ><a  class="a" href="./alg.htm" ><strong>算法配置</strong></a></li><br><br><br>
+             <li ><a  class="a" href="./camera.htm"   target="_self"  ><strong>相机设置</strong></a></li><br><br><br>
+			 <li ><a  class="a" href="./firmware.htm"   target="_self"  ><strong>升级更新</strong></a></li><br><br><br>
+			  <li ><a  class="a" href="./date.htm"   target="_self"  ><strong>日期时间</strong></a></li><br><br><br>
+			   <li ><a class="a" href="./ipaddr.htm"   target="_self"  ><strong>网络设置</strong></a></li><br><br><br>
+         </ul></tr>
+</div>
+<div id="main_page">
+<tr></tr>
+<tr> <h1>卡口一体机系统v2.0-相机设置</h1></tr>
+<form method="post" action="data_update.cgi" name="#-TEST"> 
+<hr>
+ <table border="0" width="100%" align="center">
+     <tr  class="td" bordercolor="#FFFFFF">
+          <td width="20%px">
+            <p align="center"></td>
+            <td width="30%px">
+              <p align="center"></td>
+			  <td width="40%px"></td>
+      </tr>
+	   <tr>
+          <td width="10%px" rowspan="7">
+        <p align="right"></p></td>
+            <td width="10%px">
+              <p align="left">亮度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="brightness_h" value="129"></p></td>
+			  <td width="10%px"> <p align="left">对比度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="contrast_h" value="128"></p></td>
+       </tr>
+	   <tr>
+            <td width="30%px">
+              <p align="left">饱和度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="saturation_h" value="128"></p></td>
+			  <td><p align="left">锐度&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="sharpness_h" value="128"></p></td>
+       </tr>
+      <tr>
+	  	
+        <td width="30%px" align="center">
+		  <p align="left">背光补偿<input type="radio" name="camera_back" value="0" checked="checked"                        >关闭
+          <input type="radio" name="camera_back" value="1" >开启</p></td>
+			  <td rowspan="2"> <p align="left">光照条件<input type="radio" name="camera_light"checked="checked"                          value="1" >白天<input type="radio" name="camera_light" value="0" >晚上</p></td></tr>
+	   <tr>
+	  
+	   <td ><p align="left">背光亮度<select name="backlight_level" style="width:45%">
+	   <option       value="0" >最小</option>
+	   <option                  selected="selected"value="1" >中等</option>
+	   <option value="2" >最大</option></select></p></td>
+	   </tr>
+	   <tr>
+	   <td><p align="left">视频稳定性<input type="radio" name="camera_stabilization"      value="0" >关闭<input type="radio" name="camera_stabilization" checked="checked"                    value="1" >开启</p></td>
+	   <td><p align="left">透镜畸变矫正<input type="radio" name="camera_lens"   value="0"   >关闭<input type="radio" name="camera_lens"checked="checked"                      value="1" >开启</p></td></tr>
+	     <tr>
+            <td width="30%px">
+              <p align="left">曝光时间<input type="text"  name="exp_gian_h" value="20000">100~30000</p></td>
+			  <td><p align="left">曝光增益 
+			      <input type="text"  name="exp_gian_e" value="60">8~127</p></td>
+			  </td>
+       </tr>
+	   <tr>
+	   <td><p align="left">采集模式<select name="kuaimen_level" style="width:40%">
+	   <option        selected="selected"value="0" >抓拍采集</option>
+	   <option                 value="1" >连续视频</option>
+	   </select></p></td>
+	   <td></td>
+	   </tr>
+	      <tr>
+		  <td></td>
+	  	
+        <td >
+		  <p align="left">是否重启相机<input id="shi" name="alg_plr_reboot" value="1"         onclick="return systemReboot();"  type="radio">是&nbsp;
+          <input id="fou" name="alg_plr_reboot" value="0" checked="checked"                                             type="radio">否&nbsp;</p></td>
+		  <td ><p align="left"><input type="submit" value="确定(OK)" name="submit"></p></td>
+			  </tr>
+	 
+  </table>
+</form>
+	 </div>
+	 </div>
+</body>
+</html>
+
+
