@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>人形检测</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./xhreqproc.js"></script>
+</head>
+<body onLoad="display_init()">
+	<div class="container-fluid">
+		<div class="content row">
+			<div class="left col-xs-2">
+				<header><a href="#"><img src="../logo.png"></a></header>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active"><a href="./display.html">视频播放</a></li>
+					<li role="presentation"><a href="./ipaddr.html">网络设置</a></li>
+					<li role="presentation"><a href="./facedetection.html">接收设置</a></li>
+					<li role="presentation"><a href="./change_pwd.html">用户管理</a></li>
+					<li role="presentation"><a href="./version.html">版本信息</a></li>
+				</ul>
+				<span class="footer">Copyright © 2000-2005 </span>
+			</div>
+			<div class="right col-xs-10">
+				<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST">
+					<div class="panel panel-default">
+						<div class="title panel-heading">
+							<h2>人形检测 - 视频播放</h2>
+						</div>
+						<div class="panel-body">
+							<div class="text-center">
+								<!--[if IE]>
+								   <div>
+									   <object type='application/x-vlc-plugin' id='vlc' events='True'
+										   classid='clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921'  
+										   codebase='axvlc.cab'
+										   width="720" height="576">
+											  <param name='mrl' value='' />
+											  <param name='volume' value='50' />
+											  <param name='autoplay' value='false' />
+											  <param name='loop' value='false' />
+											  <param name='fullscreen' value='false' />
+										</object>
+									</div>
+								<![endif]-->
+								<object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc' events='false' width="720" height="540">
+									<param name='mrl' value='' />
+									<param name='volume' value='50' />
+									<param name='autoplay' value='true' />
+									<param name='loop' value='false' />
+									<param name='fullscreen' value='false' />
+									<param name='controls' value='false'/> 
+								</object>
+								<div class="gotoplay">
+									<button id="mrl_addr" class="btn btn-primary" onclick="gotoPlay();">开启监控
+									</button>
+								</div>
+							</div>
+							<div class="form-group-md has-default">
+							  <label class="control-label" for="inputWarning1">请输入URL/MRL :</label>
+							  <input name="rtspurl" id="url" type="text" class="form-control" value="rtsp://admin:admin666@192.168.1.64:554/h264/ch1/main/av_stream">
+							</div>
+							<p style="margin-top: 10px;" id="time1"></p>
+						</div>
+					</div>
+					<div class="text-center">
+						<select name="isnotstartopencv" id="startopencv" style="width: 0;">
+							<option value="one">是</option>
+							<option value="two" selected="selected">否</option>
+						</select>
+						<button type="submit" class="btn btn-primary btn-lg" onclick="start();">开始检测</button>
+						<button type="submit" class="btn btn-info btn-lg" onclick="stop();">暂停检测</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+	<script>
+	    // 全局变量
+		var xmlhttp;
+		var obj_opencv= document.getElementById('startopencv');
+
+		// select值确定是否开始检测
+		function start(){
+			obj_opencv.options[0].selected = true;
+		}
+		function stop(){
+			obj_opencv.options[1].selected = true;
+		}
+
+ 		// 获取时间戳
+	    function mytime(){
+	        var a = new Date();
+	        var b = a.toLocaleTimeString();
+	        var c = a.toLocaleDateString();
+	        document.getElementById("time1").innerHTML = c+"&nbsp"+b;
+		
+	        }
+	    setInterval(mytime,100);
+
+	
+
+	    // 开启摄像头
+	    function gotoPlay(){
+			var vlc = document.getElementById("vlc"); 
+			var url = document.getElementById("url");  
+			if(vlc.playlist.isPlaying === true){
+				vlc.playlist.stop();
+			}
+			vlc.playlist.clear();
+			var itemId= vlc.playlist.add(url.value);
+			vlc.playlist.playItem(itemId);
+		}
+
+		// 定义xhr
+		function createXHR(){
+		    var xhr;
+
+		    try 
+		    {
+		        xhr = new ActiveXObject("Msxml2.XMLHTTP");
+		    } 
+		    catch (e) 
+		    {
+		        try 
+		        {// code for IE6, IE5
+		            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		        }
+		        catch(E) 
+		        {
+		            xhr = false;
+		        }
+		    }
+
+		    if (!xhr && typeof XMLHttpRequest != 'undefined') 
+		    {//code for IE7+, Firefox, Chrome, Opera, Safari
+		        xhr = new XMLHttpRequest();
+		    }
+		    return xhr;
+		}
+
+		// 请求相关
+		function createQueryString1(){	
+			var queryString = "id=7";
+			return encodeURI(encodeURI(queryString));//
+		}
+
+		function initPage(){
+				xmlhttp = createXHR();
+				xmlhttp.onreadystatechange=state_change;
+				var url = "cgi-bin/boot_args.cgi?timestamp="+ new Date().getTime();
+				
+				var queryString = createQueryString1();
+				xmlhttp.open("POST",url);
+				xmlhttp.send(queryString);		
+		}
+
+		function state_change(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+
+				var myrtsp1 ="";
+				var mytime ="";
+				var j=0;
+				var i=0;
+				var m=0;
+				var n=0;
+				var resolution_flag = 0;
+				var offset=0;
+				var count=0;//"rtsp";
+				//for(i=0;i<xmlhttp.responseText.length;i++)
+
+				var arrayRtsp = new Array(1);
+				var arrayCh = new Array(30);
+				var arrayres = new Array(1);
+				var arraystr = new Array(1);
+
+				var array_osd_str = new Array(1);
+				var array_osd_time = new Array(1);
+				var array_url_type = new Array(1);
+				var array_rtps_forward = new Array(1);
+
+				arrayCh[0]="";
+				arraystr[0]="";
+				arrayRtsp[0]="";
+				array_osd_str[0]="";
+				array_osd_time[0]="";
+				arrayres[0]="";
+				array_url_type[0]="";
+				array_rtps_forward[0]="";
+
+				for(i=0;i<30;i++){
+					arrayCh[i]="";
+				}
+
+				var mychannelId ="";
+						
+				resolution_flag = 0;
+				for(i = 0; i < xmlhttp.responseText.length; i++)
+				{
+					if((xmlhttp.responseText[i]) !='\n'&& (j == 0))
+					{
+						arrayRtsp[0]+=xmlhttp.responseText[i];
+					}
+					if(xmlhttp.responseText[i] =='\n'){
+						j++;
+					}
+				}
+				document.getElementById("url").value=arrayRtsp[0];
+			}
+		}	
+	</script> 
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".right").fadeIn("slow");
+		})();
+	</script>
+</body>
+</html>

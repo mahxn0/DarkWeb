@@ -1,0 +1,4168 @@
+Demo
+======waiting for client's request======
+rtsp_url=rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink  num=1
+begin detect ipcam1 video ! please wait......
+Now,Check Camera1 stats...
+ipcamera 1 now is opening
+[2J[1;1H
+FPS:0.0
+Objects:
+
+[2J[1;1H
+FPS:0.8
+Objects:
+
+[2J[1;1H
+FPS:3.1
+Objects:
+
+person: 26%
+chair: 34%
+[2J[1;1H
+FPS:4.3
+Objects:
+
+person: 27%
+chair: 35%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+person: 28%
+chair: 36%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 29%
+chair: 35%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 29%
+chair: 36%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 29%
+chair: 36%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 29%
+chair: 36%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 29%
+chair: 35%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+person: 30%
+chair: 35%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 30%
+chair: 35%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+person: 29%
+chair: 36%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 28%
+chair: 37%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+person: 28%
+chair: 37%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 27%
+chair: 37%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 27%
+chair: 37%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 37%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 27%
+chair: 36%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+person: 27%
+chair: 34%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 33%
+[2J[1;1H
+FPS:4.7
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 28%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 32%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 26%
+chair: 34%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 26%
+chair: 35%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 26%
+chair: 35%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 27%
+chair: 35%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 35%
+[2J[1;1H
+FPS:5.5
+Objects:
+
+person: 28%
+chair: 34%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+person: 29%
+chair: 34%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+person: 29%
+chair: 33%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 30%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 30%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 31%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 33%
+chair: 34%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 33%
+chair: 34%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 33%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 34%
+chair: 33%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 34%
+chair: 33%
+[2J[1;1H
+FPS:5.0
+Objects:
+
+person: 33%
+chair: 32%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 31%
+chair: 33%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 31%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 31%
+chair: 33%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 30%
+chair: 33%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 31%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 31%
+chair: 32%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 31%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 30%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 29%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 28%
+chair: 32%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+person: 27%
+chair: 32%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 27%
+chair: 33%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 27%
+chair: 34%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 28%
+chair: 35%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 28%
+chair: 35%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 27%
+chair: 35%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 29%
+chair: 35%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+person: 30%
+chair: 35%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 31%
+chair: 36%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 31%
+chair: 35%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 31%
+chair: 35%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 31%
+chair: 35%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 31%
+chair: 35%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 28%
+chair: 35%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 25%
+chair: 35%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 24%
+chair: 33%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 25%
+chair: 34%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 25%
+chair: 34%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 24%
+chair: 34%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 24%
+chair: 34%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 26%
+chair: 34%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 24%
+chair: 35%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 25%
+chair: 36%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 36%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 27%
+chair: 36%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 29%
+chair: 34%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 27%
+chair: 33%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 27%
+chair: 30%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 30%
+chair: 32%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 32%
+chair: 32%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 33%
+chair: 32%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+person: 34%
+chair: 31%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 33%
+chair: 31%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 33%
+chair: 31%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 31%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 31%
+chair: 29%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 31%
+chair: 29%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 31%
+chair: 30%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+person: 30%
+chair: 30%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 28%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 28%
+chair: 31%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 31%
+chair: 32%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+person: 33%
+chair: 32%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 31%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 30%
+chair: 30%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 28%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 27%
+chair: 30%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 26%
+chair: 31%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 26%
+chair: 31%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 25%
+chair: 31%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 24%
+chair: 32%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 26%
+chair: 31%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 28%
+chair: 31%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 29%
+chair: 30%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 29%
+chair: 30%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 28%
+chair: 29%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 28%
+chair: 29%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 30%
+chair: 29%
+[2J[1;1H
+FPS:4.8
+Objects:
+
+person: 32%
+chair: 30%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 35%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 36%
+chair: 30%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 36%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 35%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 34%
+chair: 30%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 33%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 33%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 33%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 33%
+chair: 30%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+person: 32%
+chair: 29%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 31%
+chair: 29%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 31%
+chair: 30%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 32%
+chair: 31%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 34%
+chair: 31%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+person: 33%
+chair: 31%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 32%
+chair: 30%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 30%
+chair: 30%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 29%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 30%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 31%
+chair: 30%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 32%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 32%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 32%
+chair: 30%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+person: 34%
+chair: 31%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+person: 36%
+chair: 31%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+person: 38%
+chair: 32%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+person: 37%
+chair: 31%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 37%
+chair: 30%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+person: 36%
+chair: 30%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 34%
+chair: 29%
+rtsp_url=rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink  num=2
+begin detect ipcam2 video ! please wait......
+[2J[1;1H
+FPS:6.5
+Objects:
+
+person: 30%
+chair: 29%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+person: 25%
+chair: 29%
+Now,Check Camera2 stats...
+ipcamera 2 now is opening
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 29%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 27%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 29%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 35%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 35%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 37%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 38%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 39%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 40%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 40%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 41%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 41%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 40%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 38%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 37%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 37%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 36%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 37%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 38%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 38%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 37%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 28%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 30%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 30%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 29%
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 27%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 26%
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 28%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 30%
+rtsp_url=rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink  num=1
+begin detect ipcam1 video ! please wait......
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 24%
+chair: 30%
+[2J[1;1H
+FPS:2.1
+Objects:
+
+person: 25%
+chair: 31%
+Now,Check Camera1 stats...
+ipcamera 1 now is opening
+[2J[1;1H
+FPS:2.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:0.0
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+person: 24%
+chair: 34%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+person: 25%
+chair: 34%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.0
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:5.5
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:4.9
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.3
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.5
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.0
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.3
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.3
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:4.5
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:5.0
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.8
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.9
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.8
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.5
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.1
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:4.5
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:5.3
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:4.5
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.5
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.5
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 31%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.8
+Objects:
+
+chair: 29%
+[2J[1;1H
+FPS:4.9
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:4.9
+Objects:
+
+chair: 30%
+[2J[Demo
+======waiting for client's request======
+rtsp_url=rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink  num=1
+begin detect ipcam1 video ! please wait......
+Now,Check Camera1 stats...
+ipcamera 1 now is opening
+[2J[1;1H
+FPS:0.0
+Objects:
+
+[2J[1;1H
+FPS:0.8
+Objects:
+
+[2J[1;1H
+FPS:3.8
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 45%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 43%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 45%
+chair: 50%
+chair: 49%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 50%
+chair: 50%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 48%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 54%
+chair: 45%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 46%
+chair: 55%
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 45%
+chair: 56%
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 56%
+chair: 47%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 46%
+chair: 56%
+chair: 45%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 47%
+chair: 56%
+chair: 44%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 49%
+chair: 57%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 57%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 56%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 56%
+chair: 45%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 56%
+chair: 45%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 48%
+chair: 53%
+chair: 45%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 48%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 46%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 46%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 49%
+chair: 47%
+chair: 45%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 48%
+chair: 48%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 48%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 49%
+chair: 45%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 46%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 47%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 48%
+chair: 51%
+chair: 47%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 48%
+chair: 51%
+chair: 47%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 47%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 48%
+chair: 52%
+chair: 48%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 48%
+chair: 52%
+chair: 50%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 48%
+chair: 52%
+chair: 50%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 49%
+chair: 52%
+chair: 51%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 53%
+chair: 51%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 53%
+chair: 51%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 50%
+chair: 53%
+chair: 50%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 49%
+chair: 53%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 53%
+chair: 49%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 49%
+chair: 52%
+chair: 48%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 51%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 48%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 48%
+chair: 53%
+chair: 49%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 48%
+chair: 53%
+chair: 49%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 47%
+chair: 52%
+chair: 49%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 53%
+chair: 49%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 47%
+chair: 54%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 46%
+chair: 54%
+chair: 49%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 54%
+chair: 49%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 46%
+chair: 52%
+chair: 48%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 46%
+chair: 49%
+chair: 47%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 45%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 47%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 47%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 46%
+chair: 47%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 46%
+chair: 47%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 45%
+chair: 47%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 46%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 46%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 47%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 47%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 48%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 46%
+chair: 51%
+chair: 48%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 49%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 48%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 48%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 48%
+chair: 50%
+chair: 48%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 47%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 48%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 48%
+chair: 48%
+chair: 45%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 48%
+chair: 48%
+chair: 45%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 48%
+chair: 45%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 50%
+chair: 49%
+chair: 47%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 51%
+chair: 51%
+chair: 48%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 52%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 52%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:5.8
+Objects:
+
+chair: 52%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 51%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 51%
+chair: 52%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 53%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 51%
+chair: 54%
+chair: 45%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 51%
+chair: 54%
+chair: 46%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 51%
+chair: 54%
+chair: 45%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 45%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 49%
+chair: 51%
+chair: 45%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 48%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 49%
+chair: 51%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 50%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 45%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 51%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 51%
+chair: 52%
+chair: 46%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 51%
+chair: 52%
+chair: 47%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 47%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 49%
+chair: 51%
+chair: 47%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 47%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 45%
+chair: 48%
+chair: 47%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 47%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 47%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 47%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 45%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 45%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 45%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 45%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.0
+Objects:
+
+chair: 44%
+chair: 49%
+chair: 46%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 45%
+chair: 49%
+chair: 47%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 46%
+chair: 48%
+chair: 48%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 46%
+chair: 48%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 49%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 49%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 49%
+chair: 48%
+chair: 48%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 47%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 45%
+chair: 48%
+chair: 45%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 41%
+chair: 48%
+chair: 44%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 41%
+chair: 47%
+chair: 43%
+[2J[1;1H
+FPS:6.3
+Objects:
+
+chair: 42%
+chair: 46%
+chair: 42%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 43%
+chair: 46%
+chair: 41%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 42%
+chair: 46%
+chair: 39%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 37%
+chair: 47%
+chair: 39%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 32%
+chair: 48%
+chair: 41%
+[2J[1;1H
+FPS:5.6
+Objects:
+
+chair: 48%
+chair: 43%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 45%
+chair: 29%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 47%
+chair: 29%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 46%
+chair: 47%
+chair: 31%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 46%
+chair: 48%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 47%
+chair: 47%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 34%
+chair: 47%
+chair: 45%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 34%
+chair: 48%
+chair: 44%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 34%
+chair: 49%
+chair: 44%
+[2J[1;1H
+FPS:4.9
+Objects:
+
+chair: 35%
+chair: 50%
+chair: 45%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 37%
+chair: 51%
+chair: 46%
+[2J[1;1H
+FPS:5.2
+Objects:
+
+chair: 40%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 41%
+chair: 38%
+chair: 44%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 40%
+chair: 42%
+[2J[1;1H
+FPS:6.4
+Objects:
+
+chair: 37%
+chair: 41%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 35%
+chair: 40%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 36%
+chair: 27%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 25%
+chair: 27%
+chair: 27%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 43%
+chair: 26%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 44%
+[2J[1;1H
+FPS:5.7
+Objects:
+
+chair: 44%
+[2J[1;1H
+FPS:5.3
+Objects:
+
+chair: 44%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:6.6
+Objects:
+
+chair: 28%
+[2J[1;1H
+FPS:5.4
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+[2J[1;1H
+FPS:6.5
+Objects:
+
+[2J[1;1H
+FPS:6.5
+Objects:
+
+[2J[1;1H
+FPS:6.6
+Objects:
+
+[2J[1;1H
+FPS:6.6
+Objects:
+
+[2J[1;1H
+FPS:6.2
+Objects:
+
+[2J[1;1H
+FPS:6.5
+Objects:
+
+[2J[1;1H
+FPS:5.4
+Objects:
+
+[2J[1;1H
+FPS:6.1
+Objects:
+
+[2J[1;1H
+FPS:5.8
+Objects:
+
+[2J[1;1H
+FPS:6.2
+Objects:
+
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 31%
+person: 25%
+[2J[1;1H
+FPS:6.1
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 34%
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 35%
+rtsp_url=rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink  num=2
+begin detect ipcam2 video ! please wait......
+[2J[1;1H
+FPS:6.5
+Objects:
+
+chair: 32%
+[2J[1;1H
+FPS:5.9
+Objects:
+
+chair: 30%
+[2J[1;1H
+FPS:3.1
+Objects:
+
+chair: 33%
+[2J[1;1H
+FPS:3.9
+Objects:
+
+person: 26%
+Now,Check Camera2 stats...
+ipcamera 2 now is opening
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+person: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 34%
+person: 33%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 37%
+person: 34%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 29%
+chair: 27%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 36%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 43%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 26%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 29%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 31%
+chair: 30%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 33%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 32%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 31%
+chair: 40%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 31%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 34%
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 27%
+chair: 48%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 52%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 54%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 34%
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 40%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 36%
+person: 26%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 35%
+person: 29%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 33%
+chair: 36%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 43%
+chair: 39%
+chair: 28%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 45%
+chair: 44%
+chair: 39%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 45%
+chair: 48%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 51%
+chair: 48%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 43%
+chair: 51%
+chair: 49%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 42%
+chair: 50%
+chair: 47%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 40%
+chair: 50%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 41%
+chair: 51%
+chair: 43%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 52%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 50%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 48%
+chair: 46%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 49%
+chair: 45%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 51%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 51%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 44%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 43%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 43%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 52%
+chair: 41%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 40%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 49%
+chair: 41%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 41%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 46%
+chair: 40%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 45%
+chair: 39%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 50%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 49%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 48%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 45%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 45%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 47%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 47%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 44%
+chair: 48%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 46%
+chair: 47%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 45%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 46%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 51%
+chair: 48%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 49%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 49%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 49%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 48%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 47%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 46%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 47%
+chair: 47%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 48%
+chair: 49%
+chair: 38%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 37%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 36%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 36%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 50%
+chair: 51%
+chair: 35%
+[2J[1;1H
+FPS:6.2
+Objects:
+
+chair: 49%
+chair: 50%
+chair: 36%
+[2J[1;1H
+FPS:6.2
+Objects:
+

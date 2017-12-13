@@ -1,0 +1,1 @@
+./darknet_offline detector demo cfg/voc.data cfg/tiny-yolo-voc.cfg tiny-yolo-voc.weights rtspsrc location="rtsp://admin:buaa123456@192.168.1.106:554/h264/ch1/main/av_stream" latency=0 ! rtph264depay ! h264parse ! omxh264dec ! videoconvert ! appsink

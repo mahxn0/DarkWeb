@@ -1,2 +1,0 @@
-filename=$(date )
-echo $filename

@@ -1,0 +1,5 @@
+classes=10
+train=/home/zy/darknetv220171011/data/oil_data/960x480/train.txt
+valid=/home/zy/darknetv220171011/data/coco_val_5k.list
+names=/home/ubuntu/darknet_offline/data/my.names
+backup=/home/zy/darknetv220171011/data/oil_data/960x480/backup

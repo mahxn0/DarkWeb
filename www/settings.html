@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>人形检测</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript" src="./common.js"></script>
+</head>
+<body onLoad="settings()">
+	<div class="container-fluid">
+		<div class="content row">
+			<div class="left col-xs-2">
+				<header><a href="#"><img src="./logo.png"></a></header>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="./display.html"><i class="iconfont icon-shexiangtou1"></i>视频中心</a></li>
+					<li role="presentation" class="active"><a href="./settings.html"><i class="iconfont icon-shezhi1"></i>相机设置</a></li>
+					<li role="presentation"><a href="./local.html"><i class="iconfont icon-jiance"></i>本地检测</a></li>
+					<li role="presentation"><a href="./system.html"><i class="iconfont icon-xitong1"></i>系统设置</a></li>
+					<li role="presentation"><a href="./change_pwd.html"><i class="iconfont icon-yonghu"></i>用户管理</a></li>
+					<li role="presentation"><a href="./version.html"><i class="iconfont icon-banben"></i>版本信息</a></li>
+				</ul>
+			</div>
+			<div class="right col-xs-10">
+				<div class="panel panel-default" style="min-width: 1212px;margin-bottom: 10px;">
+					<div class="title panel-heading">
+						<h2>人形检测 - 版本信息</h2>
+					</div>
+					<div class="panel-body" style="min-width: 1212px;">
+						<form method="post" name="#-TEST" action="./cgi-bin/data_update.cgi">
+							<input type="hidden" name="setting_total">	
+							<div class="setting camera1">
+								<p>相机1<span class="iconfont icon-shanchu delete_case"></1span> </p>
+								<div class="case camera1_switch">
+									<span class="case-title">相机开关</span>
+									<label class="radio-inline">
+										<input type="radio" class="camera_setting_switch" name="camera1_setting_switch" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" class="camera_setting_switch" name="camera1_setting_switch" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera1_check">
+									<span class="case-title">检测开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera1_setting_check" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera1_setting_check" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera1_stream">
+									<span class="case-title">码流类型</span>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera1_setting_stream"  type="radio" value="main" checked> 主码流
+									</label>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera1_setting_stream"  type="radio" value="sub"> 子码流
+									</label>
+								</div>
+								<div class="case">
+									<span class="case-title">用户名</span>
+									<input name="camera1_setting_username" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">密码</span>
+									<input name="camera1_setting_password" class="input_select inputodd" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title"> I P地址</span>
+									<input name="camera1_setting_IPaddress" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">通道号</span>
+									<span class="triangle">&#9660;</span>
+									<input class="input_select setting_ch inputodd setting_choose" name="camera1_setting_ch" type="text" value="ch1" readonly>
+									<ul>
+										<li>ch1</li>
+										<li>ch2</li>
+										<li>ch3</li>
+										<li>ch4</li>
+									</ul>
+								</div>
+								<div class="case">
+									<span class="case-title">传输协议</span>
+									<input name="camera1_setting_protocols" class="input_select" type="text" value="rtsp" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">端口号</span>
+									<input name="camera1_setting_port" class="input_select inputodd" type="text" value="554" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">视频编码</span>
+									<input name="camera1_setting_coding" class="input_select" type="text" value="h264" readonly>
+								</div>
+								<div style="display: none;">
+									<input name="none" value="">
+								</div>
+							</div>
+							<div class="setting camera2">
+								<p>相机2<span class="iconfont icon-shanchu delete_case"></span> </p>
+								<div class="case camera2_switch">
+									<span class="case-title">相机开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera2_setting_switch" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera2_setting_switch" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera2_check">
+									<span class="case-title">检测开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera2_setting_check" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera2_setting_check" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera2_stream">
+									<span class="case-title">码流类型</span>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera2_setting_stream"  type="radio" value="main"> 主码流
+									</label>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera2_setting_stream"  type="radio" value="sub" checked> 子码流
+									</label>
+								</div>
+								<div class="case">
+									<span class="case-title">用户名</span>
+									<input name="camera2_setting_username" class="input_select" autocomplete  type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">密码</span>
+									<input name="camera2_setting_password" class="input_select inputodd" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title"> I P地址</span>
+									<input name="camera2_setting_IPaddress" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">通道号</span>
+									<span class="triangle">&#9660;</span>
+									<input class="input_select setting_ch inputodd setting_choose" name="camera2_setting_ch" type="text" value="ch1" readonly>
+									<ul>
+										<li>ch1</li>
+										<li>ch2</li>
+										<li>ch3</li>
+										<li>ch4</li>
+									</ul>
+								</div>
+								<div class="case">
+									<span class="case-title">传输协议</span>
+									<input name="camera2_setting_protocols" class="input_select" type="text" value="rtsp" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">端口号</span>
+									<input name="camera2_setting_port" class="input_select inputodd" type="text" value="554" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">视频编码</span>
+									<input name="camera2_setting_coding" class="input_select" type="text" value="h264" readonly>
+								</div>
+								<div style="display: none;">
+									<input name="none" value="">
+								</div>
+							</div>
+							<div class="setting camera3">
+								<p>相机3<span class="iconfont icon-shanchu delete_case"></3span> </p>
+								<div class="case camera3_switch">
+									<span class="case-title">相机开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera3_setting_switch" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera3_setting_switch" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera3_check">
+									<span class="case-title">检测开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera3_setting_check" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera3_setting_check" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera3_stream">
+									<span class="case-title">码流类型</span>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera3_setting_stream"  type="radio" value="main"> 主码流
+									</label>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera3_setting_stream"  type="radio" value="sub" checked> 子码流
+									</label>
+								</div>
+								<div class="case">
+									<span class="case-title">用户名</span>
+									<input name="camera3_setting_username" class="input_select" autocomplete  type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">密码</span>
+									<input name="camera3_setting_password" class="input_select inputodd" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title"> I P地址</span>
+									<input name="camera3_setting_IPaddress" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">通道号</span>
+									<span class="triangle">&#9660;</span>
+									<input class="input_select setting_ch inputodd setting_choose" name="camera3_setting_ch" type="text" value="ch1" readonly>
+									<ul>
+										<li>ch1</li>
+										<li>ch2</li>
+										<li>ch3</li>
+										<li>ch4</li>
+									</ul>
+								</div>
+								<div class="case">
+									<span class="case-title">传输协议</span>
+									<input name="camera3_setting_protocols" class="input_select" type="text" value="rtsp" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">端口号</span>
+									<input name="camera3_setting_port" class="input_select inputodd" type="text" value="554" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">视频编码</span>
+									<input name="camera3_setting_coding" class="input_select" type="text" value="h264" readonly>
+								</div>
+								<div style="display: none;">
+									<input name="none" value="">
+								</div>
+							</div>
+							<div class="setting camera4">
+								<p>相机4<span class="iconfont icon-shanchu delete_case"></4span> </p>
+								<div class="case camera4_switch">
+									<span class="case-title">相机开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera4_setting_switch" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera4_setting_switch" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera4_check">
+									<span class="case-title">检测开关</span>
+									<label class="radio-inline">
+										<input type="radio" name="camera4_setting_check" value="on"> 开
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="camera4_setting_check" value="off" checked> 关
+									</label>
+								</div>
+								<div class="case camera4_stream">
+									<span class="case-title">码流类型</span>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera4_setting_stream"  type="radio" value="main"> 主码流
+									</label>
+									<label class="radio-inline">
+										<input class="input_select setting_choose" name="camera4_setting_stream"  type="radio" value="sub" checked> 子码流
+									</label>
+								</div>
+								<div class="case">
+									<span class="case-title">用户名</span>
+									<input name="camera4_setting_username" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">密码</span>
+									<input name="camera4_setting_password" class="input_select inputodd" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title"> I P地址</span>
+									<input name="camera4_setting_IPaddress" class="input_select" autocomplete type="text">
+								</div>
+								<div class="case">
+									<span class="case-title">通道号</span>
+									<span class="triangle">&#9660;</span>
+									<input class="input_select setting_ch inputodd setting_choose" name="camera4_setting_ch" type="text" value="ch1" readonly>
+									<ul>
+										<li>ch1</li>
+										<li>ch2</li>
+										<li>ch3</li>
+										<li>ch4</li>
+									</ul>
+								</div>
+								<div class="case">
+									<span class="case-title">传输协议</span>
+									<input name="camera4_setting_protocols" class="input_select" type="text" value="rtsp" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">端口号</span>
+									<input name="camera4_setting_port" class="input_select inputodd" type="text" value="554" readonly>
+								</div>
+								<div class="case">
+									<span class="case-title">视频编码</span>
+									<input name="camera4_setting_coding" class="input_select" type="text" value="h264" readonly>
+								</div>
+								<div style="display: none;">
+									<input name="none" value="">
+								</div>
+							</div>
+							<div class="text-center pos-r">
+								<span class="add_camera" title="新增相机">
+									<i class="iconfont icon-add"></i>
+								</span>
+								<button type="submit" class="btn btn-primary" onclick="return check_setting()" style="margin: 20px 0 0 -5px;width: 60px;">确定</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="tips text-center">
+					<p class="title">提示</p>
+					<p class="warnning"></p>
+					<button class="btn btn-primary">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".right").fadeIn("slow");
+			$("input").blur(function() {
+				if($(this).val()==="") {
+					console.log(1)
+				}
+			})
+		});
+	</script>
+</body>
+</html>

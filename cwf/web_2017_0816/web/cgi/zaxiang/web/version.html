@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>人形检测</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./xhreqproc.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="content row">
+			<div class="left col-xs-2">
+				<header><a href="#"><img src="../logo.png"></a></header>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="./display.html">视频播放</a></li>
+					<li role="presentation"><a href="./ipaddr.html">网络设置</a></li>
+					<li role="presentation"><a href="./facedetection.html">接收设置</a></li>
+					<li role="presentation"><a href="./change_pwd.html">用户管理</a></li>
+					<li role="presentation" class="active"><a href="./version.html">版本信息</a></li>
+				</ul>
+				<span class="footer">Copyright © 2000-2005 </span>
+			</div>
+			<div class="right col-xs-10">
+				<div class="panel panel-default">
+					<div class="title panel-heading">
+						<h2>人形检测 - 版本信息</h2>
+					</div>
+					<div class="panel-body">
+						<table class="table table-striped">
+							<thead>
+						        <tr>
+									<th>#</th>
+									<th>参数名称</th>
+									<th>参数值</th>
+						        </tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th class="item" scope="row">1</th>
+									<td>系统内核</td>
+									<td>kernel  v2.10</td>
+								</tr>
+								<tr>
+									<th class="item" scope="row">2</th>
+									<td>文件系统</td>
+									<td>FileSystem v2.20</td>
+								</tr>
+								<tr>
+									<th class="item" scope="row">3</th>
+									<td>硬件版本</td>
+									<td>Hardware v2.20</td>
+								</tr>
+								<tr>
+									<th class="item" scope="row">4</th>
+									<td>MAC地址</td>
+									<td>unkown</td>
+								</tr>
+								<tr>
+									<th class="item" scope="row">5</th>
+									<td>设备编号</td>
+									<td>unkown</td>
+								</tr>
+					        </tbody>
+					    </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".right").fadeIn("slow");
+		})();
+	</script>
+</body>
+</html>

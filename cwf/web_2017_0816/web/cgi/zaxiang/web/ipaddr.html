@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>人形检测</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./xhreqproc.js"></script>
+</head>
+<body onLoad="ipaddr_get_select()">
+	<div class="container-fluid">
+		<div class="content row">
+			<div class="left col-xs-2">
+				<header><a href="#"><img src="../logo.png"></a></header>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="./display.html">视频播放</a></li>
+					<li role="presentation" class="active"><a href="./ipaddr.html">网络设置</a></li>
+					<li role="presentation"><a href="./facedetection.html">接收设置</a></li>
+					<li role="presentation"><a href="./change_pwd.html">用户管理</a></li>
+					<li role="presentation"><a href="./version.html">版本信息</a></li>
+				</ul>
+				<span class="footer">Copyright © 2000-2005 </span>
+			</div>
+			<div class="right col-xs-10">
+				<div class="panel panel-default">
+					<div class="title panel-heading">
+						<h2>人形检测 - 网络设置</h2>
+					</div>
+					<div class="panel-body">
+						<form class="routing" method="post" onSubmit="configrestart();" action="./cgi-bin/data_update.cgi" name="plr-TEST">
+							<div class="form-group">
+								<label for="ip_addr">IP地址</label>
+								<input type="text" class="form-control" id="ip_addr" autofocus="autofocus" placeholder="本系统默认IP :192.168.1.128。">
+							</div>
+							<div class="form-group">
+								<label for="net_mask">子网掩码</label>
+								<input type="text" class="form-control" id="net_mask" placeholder="本系统默认子网掩码 :255.255.255.0。">
+							</div>
+							<div class="form-group">
+								<label for="gate_way">默认网关</label>
+								<input type="text" class="form-control" id="gate_way" placeholder="本系统默认网关 :192.168.1.1。">
+							</div>
+							<div class="routing-submit text-center">
+								<input class="btn btn-primary" value="确定" name="submit" type="submit">
+							</div>						
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<i id="fis"></i>
+		<i id="irob"></i>
+		<i id="objx"></i>
+		<i id="objy"></i>
+		<i id="objw"></i>
+		<i id="objh"></i>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".right").fadeIn("slow");
+		})();
+	</script>
+</body>
+</html>

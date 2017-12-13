@@ -1,0 +1,5 @@
+Trying to dispose element videoconvert3, but it is in PLAYING instead of the NULL state.
+You need to explicitly set elements to the NULL state before
+dropping the final reference, to allow them to clean up.
+This problem may also be caused by a refcounting bug in the
+application or some element.

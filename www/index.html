@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>人脸检测</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<!--[if lt IE 9]>
+        <script type="text/javascript">window.location="./update.html";</script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript" src="./xhreqproc.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="content row login">
+			<div class="right col-xs-6 col-xs-offset-3" style="display: block;">
+				<div class="panel panel-default">
+					<div class="title panel-heading">
+						<h2>人脸检测 - 登录</h2>
+					</div>
+					<div class="panel-body">
+						<form method="post" action="./cgi-bin/data_update.cgi" name="#-TEST">
+							<div class="form-group">
+								<label for="user_name_id1">用户名</label>
+								<input type="username" name="user_name" autofocus="autofocus" autocomplete="off" class="form-control" id="user_name_id" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="pwd_id1">密码</label>
+								<input type="password" name="pwd" class="form-control" id="pwd_id" placeholder="">
+							</div>
+							<div class="routing-submit text-center">
+								<input class="btn btn-primary" value="确定" name="submit" type="submit" onclick="return systemParam();">
+							</div>						
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".right").fadeIn("slow");
+		});
+	</script>
+</body>
+</html>
