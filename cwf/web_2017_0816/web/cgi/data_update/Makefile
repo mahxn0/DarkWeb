@@ -58,5 +58,5 @@ fsupdate:
 	@echo "|           !!!!!!!!!!!!!!<file update sucess>!!!!!!!!!!!!!  |"
 	@echo "--------------------------------------------------------------"
 	
-	cp ./*.cgi   /home/ubuntu/var/www/cgi-bin/
+	cp ./*.cgi   /home/nvidia/var/www/cgi-bin/
 

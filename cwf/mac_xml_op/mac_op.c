@@ -6,7 +6,7 @@
 
 #include "mac_op.h"
 //#define CFG_FILE_PATH ("/opt/dvr_rdk/ti814x/config.xml")
-#define CFG_FILE_PATH ("/home/ubuntu/var/mac.xml")
+#define CFG_FILE_PATH ("/home/nvidia/var/mac.xml")
 
 static FILE *fp_cfg=NULL;
 static char *file_content=NULL;

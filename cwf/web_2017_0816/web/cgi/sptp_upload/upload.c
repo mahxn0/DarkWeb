@@ -19,7 +19,7 @@
 
 int cgiMain(void)
 {
-	//fb = fopen("/home/ubuntu/cwf/12.txt","a");   //cwf
+	//fb = fopen("/home/nvidia/cwf/12.txt","a");   //cwf
 	
     cgiFilePtr file;
     int targetFile;
@@ -84,7 +84,7 @@ int cgiMain(void)
 #else
 	//fprintf(fb,"ree111115  fileNameOnServer = %s\n",fileNameOnServer);  //cwf
 	//sprintf(file_name,"/update_dir/%s",fileNameOnServer);  //cwf
-	sprintf(file_name,"/home/ubuntu/var/sptp_upload/%s",fileNameOnServer);
+	sprintf(file_name,"/home/nvidia/var/sptp_upload/%s",fileNameOnServer);
 #endif
     mode=S_IRWXU|S_IRGRP|S_IROTH;
     //build new file 
@@ -138,8 +138,8 @@ int cgiMain(void)
 
 	#if 0
 		memset(cmd , 0 ,sizeof(cmd));
-		sprintf(cmd,"/home/ubuntu/darknet_offline/runpic_det.sh %s",file_name);
-		//sprintf(cmd,"/home/ubuntu/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
+		sprintf(cmd,"/home/nvidia/darknet_offline/runpic_det.sh %s",file_name);
+		//sprintf(cmd,"/home/nvidia/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
 		system(cmd);
 		printf("<meta http-equiv='refresh' content='0; url=../local.html'>");//add
 	#else
@@ -147,7 +147,7 @@ int cgiMain(void)
 			#if 0
 				memset(cmd , 0 ,sizeof(cmd));
 				sprintf(cmd,"/home/nvidia/darknet_offline/runpic_det.sh %s",file_name);
-				//sprintf(cmd,"/home/ubuntu/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
+				//sprintf(cmd,"/home/nvidia/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
 				//system(cmd);
 				FILE *p = popen(cmd , "r");
 				pclose(p);
@@ -188,11 +188,11 @@ int cgiMain(void)
 			if(pid==0) 
 			{ 
 				memset(cmd , 0 ,sizeof(cmd));
-				sprintf(cmd,"/home/ubuntu/darknet_offline/runpic_det.sh %s",file_name);
-				//sprintf(cmd,"/home/ubuntu/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
+				sprintf(cmd,"/home/nvidia/darknet_offline/runpic_det.sh %s",file_name);
+				//sprintf(cmd,"/home/nvidia/cwf/cwf/web_2017_0816/web/cgi/sptp_upload/ccc.sh %s &",file_name);
 				//system(cmd);
 		
-				execlp("/bin/sh", "sh" , "/home/ubuntu/darknet_offline/runpic_det.sh" , file_name,NULL);
+				execlp("/bin/sh", "sh" , "/home/nvidia/darknet_offline/runpic_det.sh" , file_name,NULL);
 				
 			} 
 			else if(pid>0)

@@ -251,7 +251,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                     strcat(labelstr, ", ");
                     strcat(labelstr, names[j]);
                 }
-                printf("%s: %.0f%%\n", names[j], probs[i][j]*100);
+              //  printf("%s: %.0f%%\n", names[j], probs[i][j]*100);
             }
         }
         if(class >= 0){
@@ -277,17 +277,19 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
             rgb[1] = green;
             rgb[2] = blue;
             box b = boxes[i];
-
+	
+	       
+	
             int left  = (b.x-b.w/2.)*im.w;
             int right = (b.x+b.w/2.)*im.w;
             int top   = (b.y-b.h/2.)*im.h;
             int bot   = (b.y+b.h/2.)*im.h;
 
-            if(left < 0) left = 0;
+             if(left < 0) left = 0;
             if(right > im.w-1) right = im.w-1;
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
-
+            
             draw_box_width(im, left, top, right, bot, width, red, green, blue);
             if (alphabet) {
                 image label = get_label(alphabet, labelstr, (im.h*.03)/10);

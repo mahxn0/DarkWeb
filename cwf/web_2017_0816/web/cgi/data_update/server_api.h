@@ -19,11 +19,11 @@
 
 #define MIN_HTTP_PORT		1
 #define MAX_HTTP_PORT		65535
-#define __u32 unsigned int
-#define __u8 unsigned char
+//#define __u32 unsigned int
+//#define __u8 unsigned char
 typedef union __NET_IPV4 {
-	__u32	int32;
-	__u8	str[4];
+	unsigned int int32;
+	unsigned char str[4];
 } NET_IPV4;
 
 #include "data_define.h"

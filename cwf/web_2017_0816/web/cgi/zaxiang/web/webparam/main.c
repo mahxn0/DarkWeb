@@ -4,7 +4,7 @@
 #include "data_define.h"
 
 #define IFADDRNAME "eth0"
-#define SYS_CFG_FILE "/home/ubuntu/var/www/cgi-bin/sys.cfg"
+#define SYS_CFG_FILE "/home/nvidia/var/www/cgi-bin/sys.cfg"
 
 static void read_param();
 

@@ -1,5 +1,5 @@
 GPU=1
-CUDNN=0
+CUDNN=1
 OPENCV=1
 OPENMP=1
 DEBUG=0
@@ -16,7 +16,7 @@ ARCH= -gencode arch=compute_30,code=sm_30 \
 VPATH=./src/:./examples
 SLIB=libdarknet.so
 ALIB=libdarknet.a
-EXEC=darknet_offline
+EXEC=DetectDemo_Vid
 OBJDIR=./obj/
 
 CC=gcc

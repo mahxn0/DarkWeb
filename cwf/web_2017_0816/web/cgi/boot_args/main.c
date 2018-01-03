@@ -7,7 +7,7 @@
 
 
 #define IFADDRNAME "eth0"
-#define SYS_CFG_FILE "/home/ubuntu/var/www/cgi-bin/sys.cfg"
+#define SYS_CFG_FILE "/home/nvidia/var/www/cgi-bin/sys.cfg"
 
 //FILE *fb;  //cwf
 
@@ -820,7 +820,7 @@ int DeBaiFenStrin2Int(unsigned char *des,unsigned char *src,int size)
 
 int main(int argc,char *argv[])
 {
-	//fb = fopen("/home/ubuntu/cwf/12.txt","a");   //cwf
+	//fb = fopen("/home/nvidia/cwf/12.txt","a");   //cwf
 	//fprintf(fb,"ree111112\n");  //cwf
 	get_handle_data();
 	return 0;

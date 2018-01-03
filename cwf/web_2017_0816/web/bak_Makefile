@@ -79,14 +79,14 @@ fsupdate:
 #	chmod 777 /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/cgi-bin/*.cgi
 #	chmod 777 /home/tirvideo/lyb/armfs_ouyang/opt/dvr_rdk/ti814x/var/www/*.js
 
-	#cp *.html   /home/ubuntu/var/www/
-	#cp *.txt   /home/ubuntu/var/www/
-	#cp ./*.js   /home/ubuntu/var/www/
-	cp ./*.cgi   /home/ubuntu/var/www/cgi-bin/
+	#cp *.html   /home/nvidia/var/www/
+	#cp *.txt   /home/nvidia/var/www/
+	#cp ./*.js   /home/nvidia/var/www/
+	cp ./*.cgi   /home/nvidia/var/www/cgi-bin/
 
-	chmod 777 /home/ubuntu/var/www/*.html
-	chmod 777 /home/ubuntu/var/www/cgi-bin/*.cgi
-	chmod 777 /home/ubuntu/var/www/*.js
+	chmod 777 /home/nvidia/var/www/*.html
+	chmod 777 /home/nvidia/var/www/cgi-bin/*.cgi
+	chmod 777 /home/nvidia/var/www/*.js
 
 	
 distclean:	mrclean

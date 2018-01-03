@@ -7,9 +7,9 @@
 #include "xml_op.h"
 //#define CFG_FILE_PATH ("/opt/dvr_rdk/ti814x/config.xml")
 //#define CFG_FILE_PATH ("/opt/dvr_rdk/ti814x/var/www/cgi-bin/version.xml")
-#define CFG_FILE_PATH ("/home/ubuntu/var/www/cgi-bin/version.xml")
+#define CFG_FILE_PATH ("/home/nvidia/var/www/cgi-bin/version.xml")
 //#define SYS_CFG_PATH ("/opt/dvr_rdk/ti814x/var/www/cgi-bin/sys.xml")
-#define SYS_CFG_PATH ("/home/ubuntu/var/www/cgi-bin/sys.xml")
+#define SYS_CFG_PATH ("/home/nvidia/var/www/cgi-bin/sys.xml")
 
 
 static FILE *fp_cfg=NULL;
@@ -377,7 +377,7 @@ int get_devId_version(char *strArg)
 	char str[200] = {0};
 	int len;
 	
-	if( tir_config_open("/home/ubuntu/var/ip.xml") < 0)
+	if( tir_config_open("/home/nvidia/var/ip.xml") < 0)
 	{
         printf("cannot open cfg file!\n");
     }

@@ -21,7 +21,7 @@ release:$(target)
 
 fsupdate:
 #	cp $(target) /home/tirvideo/lyb/armfs/opt/dvr_rdk/ti814x/var/www/cgi-bin/
-	cp $(target) /home/ubuntu/var/www/cgi-bin/
+	cp $(target) /home/nvidia/var/www/cgi-bin/
 
 $(target):$(objects)
 	$(Cc) $^ -o $@

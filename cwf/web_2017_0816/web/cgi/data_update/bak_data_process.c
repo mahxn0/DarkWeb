@@ -40,8 +40,8 @@
 #include <libxml/xmlmemory.h>
 #include <libxml/xpath.h>
 
-#define OSD_FILE     "/home/ubuntu/var/www/cgi-bin/osd.xml"
-#define ARITHMETIC_FILE     "/home/ubuntu/var/www/cgi-bin/arithmetic.xml"
+#define OSD_FILE     "/home/nvidia/var/www/cgi-bin/osd.xml"
+#define ARITHMETIC_FILE     "/home/nvidia/var/www/cgi-bin/arithmetic.xml"
 
 #define STR_LEN        16
 #define OSD_STR_LEN         100
@@ -1017,7 +1017,7 @@ FAILED:
 int send_client_type_cmd(char *type)
 {
 	int ret = 0;
-	char *fifoName="/home/ubuntu/var/config_fifo";
+	char *fifoName="/home/nvidia/var/config_fifo";
 	/*if(argc != 2){
 		usage();
 		return -1;
