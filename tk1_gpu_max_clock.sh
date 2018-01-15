@@ -1,5 +1,7 @@
 #!/bin/bash
-#
+#@auther:maxiangjun
+#@date:2018-1-5
+#func:Lock GPU and MEM clocks to max MHZ
 # Lock GPU and MEM clocks to max MHz
 #
 # - benchmarking shows there is no need to override the MEM clock
