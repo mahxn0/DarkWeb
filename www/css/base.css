@@ -13,6 +13,9 @@ body {
 .pos-a {
 	position: absolute;
 }
+.hidden {
+	display: none;
+}
 .container-fluid,
 .content,
 .left,
@@ -123,9 +126,10 @@ body {
 	height: calc(100% - 75px);
 }
 .camerabox object {
+	position: relative;
+	z-index: 2;
 	width: 100%;
-	height: 99%;
-	object-fit: contain;
+	height: 100%;
 }
 #time1 {
 	position: absolute;
@@ -135,6 +139,7 @@ body {
 	color:#666;
 }
 .has-default {
+	margin-top: 5px;
 	width: 100%;
 	text-align: left;
 	color: #abaaaa;
@@ -175,9 +180,22 @@ body {
 	min-height: 768px;
 	background: rgba(0,0,0,.2);
 }
+.wrapper1 .btn {
+	padding: 4px 8px;
+}
+.wrapper1 .confirm {
+	margin-right: 20px;
+}
+#drawing {
+	position: absolute;
+	left: 50%;
+	z-index: 3;
+	transform: translateX(-50%);
+}
+/*settings.html*/
 .case {
-	padding: 4px 25px;
-	height: 31px;
+	padding: 8px 25px;
+	height: 38px;
 	color: #333;
 	text-align: left;
 }
@@ -190,7 +208,7 @@ body {
 	display: inline-block;
 	margin: 8px 8px 0 0;
 	width: 49%;
-	height: 50%;
+	height: 333px;
 	min-width: 580px;
 	min-height: 333px;
 	border: 1px solid #ddd;
@@ -228,12 +246,12 @@ body {
 .setting ul {
 	display: none;
 	position: relative;
+	z-index: 2;
 	margin-left: 240px;
 	padding-left: 0;
 	width: 155px;
 	border: 1px solid #ddd;
 	background: #fff;
-
 }
 .case-title {
 	display: inline-block;
@@ -324,7 +342,7 @@ span.delete_case:hover {
 	object-fit: contain;
 }
 .local form {
-	margin-top: 15px;
+	margin-top: 5px;
 }
 .local label {
 	width: 90%;
@@ -337,14 +355,25 @@ span.delete_case:hover {
 	border-radius: 3px;
 	cursor: pointer;
 }
-.local button {
-	margin-top: 10px;
+#upload~button {
+	margin-top: 20px;
+}
+#result {
+	padding: 0 30px;
+	text-align: left;
+}
+#result p {
+	margin-bottom: 0; 
+}
+.each_result {
+	border-top: 1px solid #ddd;
+	height: 28px;
+	line-height: 28px;
 }
 .wrapper {
 	z-index: 2;
 	display: none;
 	position: absolute;
-	
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -360,7 +389,7 @@ span.delete_case:hover {
 	transform: translate(-50%, -50%);
 	width: 400px;
 	height: 200px;
-	background: #ddd;
+	background: #efefef;
 	border-radius:  5px 5px 0 0;
 }
 .tips p {
@@ -379,4 +408,74 @@ span.delete_case:hover {
 	font-size: 16px;
 	color: #ddd;
 	border-radius: 5px 5px 0 0;
+}
+.submit button {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	width: 66px;
+	border-radius: 0 4px 4px 0;
+}
+.submit button:nth-child(1) {
+	right: 96px;
+	border-radius: 0;
+}
+.active_tab {
+	background: #286090;
+}
+/*setting.html的相机类型切换*/
+.toggle_camera {
+	color: #000;
+}
+#toggle_camera {
+	display: none;
+}
+.toggle_camera>span {
+	position: relative;
+	top: -8px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #337ab7;
+}
+.toggle_camera_bg {
+	position: relative;
+	width: 83px;
+	height: 32px;
+	background: #fff;
+	border: 3px solid #777;
+	border-radius: 8px;
+    cursor: pointer;
+	transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.toggle_camera_bg:before {
+	content: '海康';
+	left: 5px;
+	color: #66b317;
+}
+.toggle_camera_bg:after {
+	float: right;
+	content: '抓拍';
+	right: 5px;
+	color: #ff6e6e;
+}
+.toggle_camera_bg:before,
+.toggle_camera_bg:after {
+	position: absolute;
+	line-height: 26px;
+	transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.toggle_button {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+    background: #ff6e6e;
+    border-radius: 5px 0 0 5px;
+	transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#toggle_camera:checked + .toggle_camera_bg .toggle_button {
+	transform: translateX(38px);
+	background: #66b317;
+	border-radius: 0 5px 5px 0;
 }

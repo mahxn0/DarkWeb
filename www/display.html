@@ -7,6 +7,12 @@
 	<meta http-equiv="Expires" content="0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<script type="text/javascript">
+		// 未登录跳转到登录页面
+		if(!document.cookie) {
+			window.location.href="./index.html";
+		}
+	</script>
 	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
@@ -41,7 +47,8 @@
 							</div>
 							<div class="cameracase camera">
 								<div class="text-center camera_width">
-									<object type='application/x-vlc-plugin' pluginspage="http://www.videolan.org/" id='vlc' events='false'>
+									<canvas id="drawing"></canvas>
+									<object type='application/x-vlc-plugin' windowless="true" pluginspage="http://www.videolan.org/" id='vlc' events='false'>
 									    <param name='mrl'>  
  									    <param name='volume' value='50'>
  									    <param name='autoplay' value='true'>
@@ -76,5 +83,6 @@
 			$(".right").fadeIn("slow");
 		});
 	</script>
+	<script type="text/javascript" src="./frame.js"></script>
 </body>
 </html>

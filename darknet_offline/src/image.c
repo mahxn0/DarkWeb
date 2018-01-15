@@ -5,15 +5,27 @@
 #include <stdio.h>
 #include <math.h>
 #include "xml_op.h"
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <unistd.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
-
+//udp指定端口
+#define DEST_PORT 5188
+#define DEST_IP_ADDRESS "127.0.0.1"
+#define true 1
+#define false 0
+#define BOOL int
+BOOL send_flag=0;
 int windows = 0;
 
 float colors[6][3] = { {1,0,1}, {0,0,1},{0,1,1},{0,1,0},{1,1,0},{1,0,0} };
+extern int ipcam_flags;
 
+extern int num_draws;
 float get_color(int c, int x, int max)
 {
     float ratio = ((float)x/max)*5;
@@ -144,7 +156,7 @@ image get_label(image **characters, char *string, int size)
     free_image(label);
     return b;
 }
-
+//画标签函数
 void draw_label(image a, int r, int c, image label, const float *rgb)
 {
     int w = label.w;
@@ -161,7 +173,7 @@ void draw_label(image a, int r, int c, image label, const float *rgb)
         }
     }
 }
-
+//画框函数
 void draw_box(image a, int x1, int y1, int x2, int y2, float r, float g, float b)
 {
     //normalize_image(a);
@@ -234,15 +246,139 @@ image **load_alphabet()
     }
     return alphabets;
 }
+void draw_detections_pic(image im, int num, float thresh, box *boxes, float **probs, char **names, image **alphabet, int classes)
+{
+	int i;
+	//	loadxmlserverip();
+	for(i = 0; i < num; ++i){
+		int class = max_index(probs[i], classes);
+		float prob = probs[i][class];
+		if(prob > thresh){
 
+			int width = im.h * .012;
+
+			if(0){
+				width = pow(prob, 1./2.)*10+1;
+				alphabet = 0;
+			}
+
+			//printf("%s: %.0f%%\n", names[class], prob*100);
+			int offset = class*123457 % classes;
+			float red = get_color(2,offset,classes);
+			float green = get_color(1,offset,classes);
+			float blue = get_color(0,offset,classes);
+			float rgb[3];
+
+			//width = prob*20+2;
+
+			rgb[0] = red;
+			rgb[1] = green;
+			rgb[2] = blue;
+			box b = boxes[i];
+
+			int left  = (b.x-b.w/2.)*im.w;
+			int right = (b.x+b.w/2.)*im.w;
+			int top   = (b.y-b.h/2.)*im.h;
+			int bot   = (b.y+b.h/2.)*im.h;
+			if(left < 0) left = 0;
+			if(right > im.w-1) right = im.w-1;
+			if(top < 0) top = 0;
+			if(bot > im.h-1) bot = im.h-1;
+		//	int objw=right-left;
+		//	int objh=bot-top;
+		//	int objx=left+objw/2;
+		//	int objy=top+objh/2;
+		//	
+		//	//	fprintf(fp,"视频帧号:%d\n置信度:%f\n %s Location(XY):( %2d,%2d )\n %s Property(WH):(%2d,%2d)\n",numfp,prob*100,names[class],objx,objy,names[class],objw,objh);
+
+
+		//	int sock_fd;/*套接字文件描述符*/
+		//	int send_num;
+		//	int dest_len;
+		//	char send_buf[200];
+		//	struct sockaddr_in addr_serv;/*服务端地址，客户端地址*/
+		//	char ttime[100]; 
+		//	struct timeval    tv;
+		//	struct timezone tz;
+
+		//	struct tm    *p;
+
+		//	gettimeofday(&tv, &tz);
+
+		//	p = localtime(&tv.tv_sec);
+		//	sprintf(ttime,"time_now:%d:%d:%d:%d:%d:%d.%ld\n", 1900+p->tm_year, 1+p->tm_mon, p->tm_mday, p->tm_hour, p->tm_min, p->tm_sec, tv.tv_usec);
+
+
+
+
+
+
+		//	sprintf(send_buf,"\n%s \nVideo frame no.:%d\nconfidence:%f\n %s Location(XY):( %2d,%2d )\n %s Property(WH):(%2d,%2d)\n",ttime,numfp,prob*100,names[class],objx,objy,names[class],objw,objh);
+		//	sock_fd = socket(AF_INET,SOCK_DGRAM,0);//创建套接子
+		//	//初始化服务器端地址
+		//	memset(&addr_serv,0,sizeof(addr_serv));
+		//	addr_serv.sin_family = AF_INET;
+		//	printf("%s",serverip);
+		//	printf("%d",atoi(serverport));
+		//	addr_serv.sin_addr.s_addr = inet_addr(serverip);
+		//	addr_serv.sin_port = htons(serverport);
+
+		//	dest_len = sizeof(struct sockaddr_in);
+		//	printf("begin send:\n");
+		//	send_num = sendto(sock_fd,send_buf,sizeof(send_buf),0,(struct sockaddr *)&addr_serv,dest_len);
+		//	if(send_num < 0){
+		//		perror("sendto");
+		//		exit(1);
+		//	} else{
+
+		//		printf("send sucessful:%s\n",send_buf);
+		//	}
+		//	close(sock_fd);           
+
+
+
+			draw_box_width(im, left, top, right, bot, width, red, green, blue);
+			if (alphabet) {
+				image label = get_label(alphabet, names[class], (im.h*.03)/10);
+				draw_label(im, top + width, left, label, rgb);
+
+			}
+		}
+	}
+	//	fclose(fp);
+}
+/**
+*@auther:maxinagjun
+*@date:2018/1/8
+*@function:检测到目标位置信息后通过udp把坐标发送到后端
+*/
 void draw_detections(image im, int num, float thresh, box *boxes, float **probs, float **masks, char **names, image **alphabet, int classes)
 {
     int i,j;
-
+    int sock_fd;/*套接字文件描述符*/
+            int send_num;
+            int dest_len;
+            char send_buf[500];
+            char send_finalbuff[500];
+            struct sockaddr_in addr_serv; /*服务端地址，客户端地址*/
+    send_flag=false;
+     /*
+     * when producing the output image, output the prediction as a text file
+     * Print the output class, confidence and the bounding box coordinate
+     * Prediction: <class>   <confidence>  Location: <Left> <Right> <Top> <Bottom> 
+     */
+  //  FILE *out_fd = fopen("prediction_details.txt", "a+");
+ //   if (out_fd == NULL)
+ //   {
+ //       printf("Error opening file!\n");
+ //       exit(1);
+ //   }
     for(i = 0; i < num; ++i){
         char labelstr[4096] = {0};
         int class = -1;
+        //printf("i=%d\n\n",i);
         for(j = 0; j < classes; ++j){
+            //printf("classes=%d\n\n",classes);
             if (probs[i][j] > thresh){
                 if (class < 0) {
                     strcat(labelstr, names[j]);
@@ -251,7 +387,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                     strcat(labelstr, ", ");
                     strcat(labelstr, names[j]);
                 }
-                printf("%s: %.0f%%\n", names[j], probs[i][j]*100);
+              //  printf("%s: %.0f%%\n", names[j], probs[i][j]*100);
             }
         }
         if(class >= 0){
@@ -263,7 +399,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                alphabet = 0;
                }
              */
-
+            
             //printf("%d %s: %.0f%%\n", i, names[class], prob*100);
             int offset = class*123457 % classes;
             float red = get_color(2,offset,classes);
@@ -277,34 +413,77 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
             rgb[1] = green;
             rgb[2] = blue;
             box b = boxes[i];
-
+	
+	       
+	
             int left  = (b.x-b.w/2.)*im.w;
             int right = (b.x+b.w/2.)*im.w;
             int top   = (b.y-b.h/2.)*im.h;
             int bot   = (b.y+b.h/2.)*im.h;
 
-            if(left < 0) left = 0;
+             if(left < 0) left = 0;
             if(right > im.w-1) right = im.w-1;
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
 
-            draw_box_width(im, left, top, right, bot, width, red, green, blue);
-            if (alphabet) {
-                image label = get_label(alphabet, labelstr, (im.h*.03)/10);
-                draw_label(im, top + width, left, label, rgb);
-                free_image(label);
-            }
-            if (masks){
-                image mask = float_to_image(14, 14, 1, masks[i]);
-                image resized_mask = resize_image(mask, b.w*im.w, b.h*im.h);
-                image tmask = threshold_image(resized_mask, .5);
-                embed_image(tmask, im, left, top);
-                free_image(mask);
-                free_image(resized_mask);
-                free_image(tmask);
-            }
+            int objw=right-left;
+            int objh=bot-top;
+            int objx=left+objw/2;
+            int objy=top+objh/2;
+            //fprintf(fp,"视频帧号:%d\n置信度:%f\n %s Location(XY):( %2d,%2d )\n %s Property(WH):(%2d,%2d)\n",numfp,prob*100,names[class],objx,objy,names[class],objw,objh);
+           // fprintf(out_fd,"%d:%s,%d,%d,%d,%d;",ipcam_flags,names[class],objx,objy,objw,objh);
+            sprintf(send_buf,"%d:%s,%d,%d,%d,%d;",ipcam_flags,names[class],objx,objy,objw,objh);
+            strcat(send_finalbuff,send_buf);
+//	   给不同的目标画不同颜色的坐标框
+           draw_box_width(im, left, top, right, bot, width, red, green, blue);
+         //  if (alphabet) {
+         //      image label = get_label(alphabet, labelstr, (im.h*.03)/10);
+         //      draw_label(im, top + width, left, label, rgb);
+         //      free_image(label);
+         //  }
+         //  if (masks){
+         //      image mask = float_to_image(14, 14, 1, masks[i]);
+         //      image resized_mask = resize_image(mask, b.w*im.w, b.h*im.h);
+         //      image tmask = threshold_image(resized_mask, .5);
+         //      embed_image(tmask, im, left, top);
+         //      free_image(mask);
+         //      free_image(resized_mask);
+         //      free_image(tmask);
+         //  }
         }
+       
     }
+    //fputc(10,out_fd);
+    send_flag=true;
+    if(send_flag)
+    {
+        sock_fd=socket(AF_INET,SOCK_DGRAM,0);//创建套接字
+        //初始化服务端地址
+        memset(&addr_serv,0,sizeof(addr_serv));
+        addr_serv.sin_family=AF_INET;
+        addr_serv.sin_addr.s_addr=inet_addr(DEST_IP_ADDRESS);
+        addr_serv.sin_port=htons(DEST_PORT);
+        dest_len=sizeof(struct sockaddr_in);
+        printf("Begin Send:\n");
+	if(strcmp(send_finalbuff,"") == 0)
+	{
+        
+            sprintf(send_finalbuff,"%d,\"\",0,0,0,0",ipcam_flags);
+	}
+        send_num=sendto(sock_fd,send_finalbuff,sizeof(send_finalbuff),0,(struct sockaddr*)&addr_serv,dest_len);
+        if(send_num<0)
+        {
+            perror("send to error");
+            exit(1);
+        }
+        else
+        {
+            printf("Send_Sucessful:%s\n",send_finalbuff);
+        }
+        memset(send_finalbuff,0,sizeof(send_finalbuff));
+        close(sock_fd);
+    }
+    //fclose(out_fd);
 }
 
 void transpose_image(image im)

@@ -2,6 +2,6 @@ make -j4
 
 echo "build finish..."
 
-cp darknet_offline ~/detectmodel
+cp DetectDemo_Vid  ~/detectmodel
 
 echo "mv exec finish..."

@@ -561,7 +561,11 @@ void validate_detector_recall(char *cfgfile, char *weightfile)
         free_image(sized);
     }
 }
-
+/**
+*@auther:maixiangjun
+*@date:2018/1/11/10:03
+*@function:图片检测函数，检测完成之后保存信息到xml，后端读取xml信息，发送信号给前端，前端显示。
+*/
 void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh, float hier_thresh, char *outfile, int fullscreen)
 {
     list *options = read_data_cfg(datacfg);
@@ -654,20 +658,20 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
         get_region_boxes(l, im.w, im.h, net->w, net->h, thresh, probs, boxes, masks, 0, 0, hier_thresh, 1);
         if (nms) do_nms_sort(boxes, probs, l.w*l.h*l.n, l.classes, nms);
         //else if (nms) do_nms_sort(boxes, probs, l.w*l.h*l.n, l.classes, nms);
-        draw_detections(im, l.w*l.h*l.n, thresh, boxes, probs, masks, names, alphabet, l.classes);
+        draw_detections_pic(im, l.w*l.h*l.n, thresh, boxes, probs, masks, names, alphabet, l.classes);
         if(outfile){
             save_image(im, outfile);
         }
         else{
             save_image(im, "predictions");
 #ifdef OPENCV
-            cvNamedWindow("predictions", CV_WINDOW_NORMAL); 
-            if(fullscreen){
-                cvSetWindowProperty("predictions", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
-            }
-            show_image(im, "predictions");
-            cvWaitKey(0);
-            cvDestroyAllWindows();
+      //      cvNamedWindow("predictions", CV_WINDOW_NORMAL); 
+      //      if(fullscreen){
+      //          cvSetWindowProperty("predictions", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+      //      }
+      //      show_image(im, "predictions");
+      //      cvWaitKey(0);
+      //      cvDestroyAllWindows();
 #endif
         }
 
@@ -712,7 +716,7 @@ void run_detector(int argc, char **argv)
     } else {
         gpu = gpu_index;
         gpus = &gpu;
-        ngpus = 1;
+        ngpus = 1;  
     }
 
     int clear = find_arg(argc, argv, "-clear");
@@ -730,11 +734,19 @@ void run_detector(int argc, char **argv)
     else if(0==strcmp(argv[2], "valid")) validate_detector(datacfg, cfg, weights, outfile);
     else if(0==strcmp(argv[2], "valid2")) validate_detector_flip(datacfg, cfg, weights, outfile);
     else if(0==strcmp(argv[2], "recall")) validate_detector_recall(cfg, weights);
+    else if(0==strcmp(argv[2],"rotate")) {
+	list *options = read_data_cfg(datacfg);
+        int classes = option_find_int(options, "classes", 20);
+        char *name_list = option_find_str(options, "names", "data/names.list");
+        char **names = get_labels(name_list);
+	minit_loadnetwork(cfg, weights, thresh,names,classes,frame_skip,avg,hier_thresh);
+    }
     else if(0==strcmp(argv[2], "demo")) {
         list *options = read_data_cfg(datacfg);
         int classes = option_find_int(options, "classes", 20);
         char *name_list = option_find_str(options, "names", "data/names.list");
         char **names = get_labels(name_list);
-        demo(cfg, weights, thresh, cam_index, filename, names, classes, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen);
+       // initdetect(cfg, weights, thresh, names, classes, frame_skip, avg, hier_thresh);
+	demo(cfg, weights, thresh, cam_index, filename, names, classes, frame_skip, prefix, avg, hier_thresh, width, height, fps, fullscreen);
     }
 }

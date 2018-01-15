@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 </html>
 <head>
 	<title>人形检测</title>
@@ -6,6 +6,12 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="-1">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<script type="text/javascript">
+		// 未登录跳转到登录页面
+		if(!document.cookie) {
+			window.location.href="./index.html";
+		}
+	</script>
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
 	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
@@ -21,8 +27,7 @@
 					<li role="presentation"><a href="./display.html"><i class="iconfont icon-shexiangtou1"></i>视频中心</a></li>
 					<li role="presentation"><a href="./settings.html"><i class="iconfont icon-shezhi1"></i>相机设置</a></li>
 					<li role="presentation"><a href="./local.html"><i class="iconfont icon-jiance"></i>本地检测</a></li>
-					<li role="presentation"><a href="./ipaddr.html"><i class="iconfont icon-2"></i>网络设置</a></li>
-					<li role="presentation" class="active"><a href="./facedetection.html"><i class="iconfont icon-jieshou"></i>接收设置</a></li>
+					<li role="presentation"><a href="./system.html"><i class="iconfont icon-xitong1"></i>系统设置</a></li>
 					<li role="presentation"><a href="./change_pwd.html"><i class="iconfont icon-yonghu"></i>用户管理</a></li>
 					<li role="presentation"><a href="./version.html"><i class="iconfont icon-banben"></i>版本信息</a></li>
 				</ul>

@@ -11,9 +11,13 @@ var url= "cgi-bin/boot_args.cgi?timestamp="+ new Date().getTime();
 // 浏览器类型
 var browserType= window.navigator.userAgent;
 // 显示的相机数量
-var camera_num=0;
+var camera_num=1;
 // 相机设置框的数量
 var s=4;
+// 当前播放路径
+var cur_vlc_url="";
+// 相机路径数组
+var arr_url="";
 
 
 // 提示动画
@@ -31,8 +35,8 @@ $(window).resize(
 		let object=$(".cameracase object");
 
 		if(camera_num>=2) {
-			object.css("width","100%");
-			object.css("height","99%");
+		// 	object.css("width","100%");
+		// 	object.css("height","100%");
 		}
 	}
 );
@@ -40,6 +44,19 @@ $(window).resize(
 /************************settings.html*************************************/
 // 相机设置value检测
 function check_setting() {
+	let bool= true;
+	let c=document.cookie;
+	let netmask= c.slice(c.indexOf("ip=")+3,c.lastIndexOf("."));
+	$(".setting").map(function(i,item) {
+		let ip= $(this).find(".ip_input").val();
+		let cur_netmask= ip.slice(0,ip.lastIndexOf("."));
+		if(netmask!==cur_netmask) {
+			$(".warnning").html("相机"+(i+1)+"的网段必须为"+netmask+".x");
+			_fadeIn();
+			bool= false;
+		}
+	});
+	return bool;
 }
 // 相机播放
 function gotoPlay(){
@@ -79,7 +96,7 @@ function setting(data) {
 			$(".camera"+num+"_stream input[value='main']").attr('checked','true');
 			$("[name=camera"+num+"_setting_ch]").val(arr3[i].slice(-18,-15));
 		}
-
+		// 获取用户信息和ip
 		arr3[i].indexOf("main")+1?userMessage=arr3[i].slice(7,-28):userMessage=arr3[i].slice(7,-27);
 		$("[name=camera"+num+"_setting_username]").val(userMessage.slice(0,userMessage.indexOf(":")));
 		$("[name=camera"+num+"_setting_password]").val(userMessage.slice(userMessage.indexOf(":")+1,userMessage.indexOf("@")));
@@ -99,7 +116,9 @@ function camera_setting(data) {
 	let tab_str= "";
 	let arr1=arr[0].split("\n").slice(1);
 	let arr3=arr[2].split("\n");
-	let on_num= arr1.indexOf("on")+1;
+	// 保存相机路径数组
+	arr_url= arr3;
+	let on_num= arr1[0].indexOf("on")+1;
 
 	// 相机tab选项卡
 	for(let i=0;i<tab_num;i++) {
@@ -131,14 +150,16 @@ function camera_setting(data) {
 			gotoPlay();
 		}
 	});
-
+	// 重置相机宽度
+	$(".camera object").width("");
+	$(".camera object").height("");
 	// 判断开启的相机
 	for(let i=0;i<arr1.length;i++) {
 		if(arr1[i]=='on') {
 			camera_num++;
 		}
 	}
-	// 相机开启初始化
+	// 相机初始宽高
 	if(camera_num==0) {
 		alert("请至少开启一个相机！")
 	}
@@ -168,7 +189,7 @@ $(function() {
 			return false;
 		}
 		s++;
-		let str="<div class='setting camera"+s+"'><p>相机"+s+"<span class='iconfont icon-shanchu delete_case'></span></p><div class='case camera"+s+"_switch'><span class='case-title'>相机开关</span><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_switch' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_switch' value='off' checked> 关</label></div><div class='case camera"+s+"_check'><span class='case-title'>检测开关</span><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_check' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_check' value='off' checked> 关</label></div><div class='case camera"+s+"_stream'><span class='case-title'>码流类型</span><label class='radio-inline'><input class='input_select setting_choose' name='camera"+s+"_setting_stream'  type='radio' value='main'> 主码流</label><label class='radio-inline'><input class='input_select setting_choose' name='camera"+s+"_setting_stream'  type='radio' value='sub' checked> 子码流</label></div><div class='case'><span class='case-title'>用户名</span><input name='camera"+s+"_setting_username' class='input_select' autocomplete  type='text'></div><div class='case'><span class='case-title'>密码</span><input name='camera"+s+"_setting_password' class='input_select inputodd' autocomplete type='text'></div><div class='case'><span class='case-title'> I P地址</span><input name='camera"+s+"_setting_IPaddress' class='input_select' autocomplete type='text'></div><div class='case'><span class='case-title'>通道号</span><span class='triangle'>&#9660;</span>\n<input class='input_select setting_ch inputodd setting_choose' name='camera"+s+"_setting_ch' type='text' value='ch1' readonly><ul><li>ch1</li><li>ch2</li><li>ch3</li><li>ch4</li></ul></div><div class='case'><span class='case-title'>传输协议</span><input name='camera"+s+"_setting_protocols' class='input_select' type='text' value='rtsp' readonly></div><div class='case'><span class='case-title'>端口号</span><input name='camera"+s+"_setting_port' class='input_select inputodd' type='text' value='554' readonly></div><div class='case'><span class='case-title'>视频编码</span><input name='camera"+s+"_setting_coding' class='input_select' type='text' value='h264' readonly></div><div style='display: none;'><input name='none' value=''></div></div>"
+		let str="<div class='setting camera"+s+"'><p>相机"+s+"<span class='iconfont icon-shanchu delete_case'></span></p><div class='case camera"+s+"_switch'><span class='case-title'>相机开关</span><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_switch' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_switch' value='off' checked> 关</label></div><div class='case camera"+s+"_check'><span class='case-title'>检测开关</span><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_check' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+s+"_setting_check' value='off' checked> 关</label></div><div class='case camera"+s+"_stream'><span class='case-title'>码流类型</span><label class='radio-inline'><input class='input_select setting_choose' name='camera"+s+"_setting_stream'  type='radio' value='main'> 主码流</label><label class='radio-inline'><input class='input_select setting_choose' name='camera"+s+"_setting_stream'  type='radio' value='sub' checked> 子码流</label></div><div class='case'><span class='case-title'>通道号</span><span class='triangle'>&#9660;</span>\n<input class='input_select setting_ch setting_choose' name='camera"+s+"_setting_ch' type='text' value='ch1' readonly><ul><li>ch1</li><li>ch2</li><li>ch3</li><li>ch4</li></ul></div><div class='case'><span class='case-title'>用户名</span><input name='camera"+s+"_setting_username' class='input_select inputodd' autocomplete  type='text'></div><div class='case'><span class='case-title'>密码</span><input name='camera"+s+"_setting_password' class='input_select' autocomplete type='text'></div><div class='case'><span class='case-title'> I P地址</span><input name='camera"+s+"_setting_IPaddress' class='ip_input input_select inputodd' autocomplete type='text'></div><div class='case hidden'><span class='case-title'>传输协议</span><input name='camera"+s+"_setting_protocols' class='input_select' type='text' value='rtsp' readonly></div><div class='case hidden'><span class='case-title'>端口号</span><input name='camera"+s+"_setting_port' class='input_select inputodd' type='text' value='554' readonly></div><div class='case hidden'><span class='case-title'>视频编码</span><input name='camera"+s+"_setting_coding' class='input_select' type='text' value='h264' readonly></div><div style='display: none;'><input name='none' value=''></div></div>";
 		$(this).parent(".text-center").before(str);
 		$("[name='setting_total']").val(s);
 	})
@@ -278,11 +299,13 @@ function settings() {
 	$.post(url, encode(id), function(data) {
 		let num=parseInt(data.slice(0,1));
 		let aStr="";
+		// 防止相机设置个数NAN
+		if(num!==num) num=0;
 		s=num;
 		$("[name='setting_total']").val(s);
 		for(let i=1;i<num+1;i++) {
-			let str="<div class='setting camera"+i+"'><p>相机"+i+"<span class='iconfont icon-shanchu delete_case'></span></p><div class='case camera"+i+"_switch'><span class='case-title'>相机开关</span><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_switch' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_switch' value='off' checked> 关</label></div><div class='case camera"+i+"_check'><span class='case-title'>检测开关</span><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_check' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_check' value='off' checked> 关</label></div><div class='case camera"+i+"_stream'><span class='case-title'>码流类型</span><label class='radio-inline'><input class='input_select setting_choose' name='camera"+i+"_setting_stream'  type='radio' value='main'> 主码流</label><label class='radio-inline'><input class='input_select setting_choose' name='camera"+i+"_setting_stream'  type='radio' value='sub' checked> 子码流</label></div><div class='case'><span class='case-title'>用户名</span><input name='camera"+i+"_setting_username' class='input_select' autocomplete  type='text'></div><div class='case'><span class='case-title'>密码</span><input name='camera"+i+"_setting_password' class='input_select inputodd' autocomplete type='text'></div><div class='case'><span class='case-title'> I P地址</span><input name='camera"+i+"_setting_IPaddress' class='input_select' autocomplete type='text'></div><div class='case'><span class='case-title'>通道号</span><span class='triangle'>&#9660;</span>\n<input class='input_select setting_ch inputodd setting_choose' name='camera"+i+"_setting_ch' type='text' value='ch1' readonly><ul><li>ch1</li><li>ch2</li><li>ch3</li><li>ch4</li></ul></div><div class='case'><span class='case-title'>传输协议</span><input name='camera"+i+"_setting_protocols' class='input_select' type='text' value='rtsp' readonly></div><div class='case'><span class='case-title'>端口号</span><input name='camera"+i+"_setting_port' class='input_select inputodd' type='text' value='554' readonly></div><div class='case'><span class='case-title'>视频编码</span><input name='camera"+i+"_setting_coding' class='input_select' type='text' value='h264' readonly></div><div style='display: none;'><input name='none' value=''></div></div>";
-				aStr+=str;
+			let str1="<div class='setting camera"+i+"'><p>相机"+i+"<span class='iconfont icon-shanchu delete_case'></span></p><div class='case camera"+i+"_switch'><span class='case-title'>相机开关</span><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_switch' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_switch' value='off' checked> 关</label></div><div class='case camera"+i+"_check'><span class='case-title'>检测开关</span><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_check' value='on'> 开</label><label class='radio-inline'><input type='radio' name='camera"+i+"_setting_check' value='off' checked> 关</label></div><div class='case camera"+i+"_stream'><span class='case-title'>码流类型</span><label class='radio-inline'><input class='input_select setting_choose' name='camera"+i+"_setting_stream'  type='radio' value='main'> 主码流</label><label class='radio-inline'><input class='input_select setting_choose' name='camera"+i+"_setting_stream'  type='radio' value='sub' checked> 子码流</label></div><div class='case'><span class='case-title'>通道号</span><span class='triangle'>&#9660;</span>\n<input class='input_select setting_ch setting_choose' name='camera"+i+"_setting_ch' type='text' value='ch1' readonly><ul><li>ch1</li><li>ch2</li><li>ch3</li><li>ch4</li></ul></div><div class='case'><span class='case-title'>用户名</span><input name='camera"+i+"_setting_username' class='input_select inputodd' autocomplete  type='text'></div><div class='case'><span class='case-title'>密码</span><input name='camera"+i+"_setting_password' class='input_select' autocomplete type='text'></div><div class='case'><span class='case-title'> I P地址</span><input name='camera"+i+"_setting_IPaddress' class='ip_input input_select inputodd' autocomplete type='text'></div><div class='case hidden'><span class='case-title'>传输协议</span><input name='camera"+i+"_setting_protocols' class='input_select' type='text' value='rtsp' readonly></div><div class='case hidden'><span class='case-title'>端口号</span><input name='camera"+i+"_setting_port' class='input_select inputodd' type='text' value='554' readonly></div><div class='case hidden'><span class='case-title'>视频编码</span><input name='camera"+i+"_setting_coding' class='input_select' type='text' value='h264' readonly></div><div style='display: none;'><input name='none' value=''></div></div>";
+				aStr+=str1;
 		}
 		$(".setting").remove();
 		$("form .text-center").before(aStr);
@@ -309,8 +332,8 @@ function ipaddr_get_select() {
 
 	$.post( url, encode(id), function(data) {
 		let arr;
-
 		arr= data.split("\n");
+
 		$("#ip_addr").val(arr[0]);
 		$("#net_mask").val(arr[1]);
 		$("#gate_way").val(arr[2]);
@@ -335,9 +358,13 @@ function local_upload() {
 			let arr;
 
 			arr= data.split("\n");
+			// 上传图片状态
 			statu= arr[0];
+			// 检测进行装填
 			tested= arr[1];
+			// 检测文件类型
 			type= arr[2];
+			// 检测保存的图片路径
 			testedUrl= arr[3];
 
 			if (tested==1) {

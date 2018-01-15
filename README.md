@@ -1,3 +1,4 @@
 # DarkWeb
-用网页控制darknet的播放和显示，将检测到的目标信息：时间戳，目标所在的坐标，对应帧数，置信度等通过udp发送到指定的server端。  
-网页搭建用比较古老的boa服务器，具体搭建过程也比较简单，按照网上教程一步一步来。
+darknet with web server to detect pictures and video;
+
+v2 add HKcamera take turn detect .

@@ -1,11 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>人形检测</title>
+	<title>人脸检测</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<script type="text/javascript">
+		// 未登录跳转到登录页面
+		if(!document.cookie) {
+			window.location.href="./index.html";
+		}
+	</script>
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
 	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
@@ -29,7 +35,7 @@
 			<div class="right col-xs-10">
 				<div class="panel panel-default">
 					<div class="title panel-heading">
-						<h2>人形检测 - 系统设置</h2>
+						<h2>人脸检测 - 系统设置</h2>
 					</div>
 					<div class="panel-body">
 						<div class="system_setting_title">
